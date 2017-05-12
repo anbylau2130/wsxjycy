@@ -1,0 +1,102 @@
+
+.navbar-toggle{ display: none; }
+@media (max-width: 1181px) {
+    body { background-size:100%; }
+    .content { width: 100%; }
+    .header .content img { width:100%;}
+
+    .mainNav li a { padding: 0px 32px; }
+}
+
+@media screen and (max-width: 1004px) {
+    body { background-size:100%; }
+    h2, .h2 { font-size: 24px; line-height:2em;}
+    .mainNav li a { padding: 0 30px; }
+     .citem .nub{ display: none; }
+     .citem .main { margin-left:10px; margin-right:10px;}
+         .link .row .btn {margin:5px ; padding: 5px 15px; }
+         .xs4 {   font-size: 14px !important;}
+    .partA .xs4 img { width: 150px; }
+	.partner_local{position:absolute; z-index:10; top:10%; width:100%;}
+}
+
+@media screen and (max-width: 980px) {
+    .navbar-toggle { display: block; }
+	.header{margin-top:0; position:relative; z-index:1;}
+	.mainNav{overflow:visible;}
+    /*.mainNav li{padding: 0 5%;}*/
+	.mainNav{position:relative; z-index:99;}
+	.mainNav .content{ position:absolute; z-index:9999; margin-top:68px; display:none;}
+	.mainNav li {float:none; text-align:left; text-indent:2em; border-bottom:1px solid #f5f5f5;}
+    .mainNav li a{padding:0 10px;background-color:#fff;}
+		.mainNav li a:hover{background-color:#ed0002;}
+    .top { background: url("../images/logo_bg.jpg")/*tpa=http://www.nbjy.org.cn/content/cyds/images/logo_bg.jpg*/ repeat-x bottom #fff; border-bottom: 1px solid #ddd; }
+    .home .top { position:initial;left:0px;top:0px;width:100%;}
+.mainContainer{position:relative; z-index:1;}
+
+    .collapse.in { -webkit-transform: translateX(0px) translateY(0px); -moz-transform: translateX(0px) translateY(0px); -ms-transform: translateX(0px) translateY(0px); -o-transform: translateX(0px) translateY(0px); transform: translateX(0px) translateY(0px); }
+    .collapse { -webkit-transition: all ease-in-out .5s; -moz-transition: all ease-in-out .5s; -ms-transition: all ease-in-out .5s; -o-transition: all ease-in-out .5s; transition: all ease-in-out .5s; -webkit-transform: translateX(0px) translateY(-200px); -moz-transform: translateX(0px) translateY(-200px); -ms-transform: translateX(0px) translateY(-200px); -o-transform: translateX(0px) translateY(-200px); transform: translateX(0px) translateY(-200px); position: absolute; top: 68px; left: 0; width: 100%; z-index: 10005; background: url("../images/blank.png")/*tpa=http://www.nbjy.org.cn/content/cyds/images/blank.png*/; border-left: 1px solid #ddd; height: 150px;  z-index: 90;  }
+	 .link h2 {padding:0;}
+	 .my_tab{width:auto;}
+	 
+	.my_tab img{width:100%;}
+	 .tab_header .icon{background-size:300%; width:60px; height:53px; margin:5px auto;}
+	 .tab_header .icon_tab1{background-position:0 0;}
+.tab_header .icon_tab2{background-position:-60px 0;}
+.tab_header .icon_tab3{background-position:-120px 0;}
+.tab_header .hover .icon_tab1{background-position:0 -53px;}
+.tab_header .hover .icon_tab2{background-position:-60px -53px;}
+.tab_header .hover .icon_tab3{background-position:-120px -53px;}
+	.tab_header li{font-size:20px;}
+	.link .row .btn {margin:3px ; padding: 3px 10px; }
+	.my_tab .prev{left:15px;}
+.my_tab .next{right:15px;}
+	
+	
+	
+}
+
+@media screen and (max-width: 600px) {
+   body, button, input, select, textarea, td { outline-style: none; font: 12px/1.5em "Microsoft YaHei",Arial; }
+    h2, .h2 { font-size: 18px; line-height:2em;} 
+    h3, .h3 { font-size: 14px; line-height:2em;} 
+    .navbar-toggle{ display: block; }
+    .mainNav { height:50px;background-size:auto 100% }
+    ad{ margin-top:50px; }
+    .mainNav li  { color:#333;margin:1px;line-height:25px;width:100%; border-bottom:1px solid #f5f5f5; line-height:2.25em;}
+        .mainNav li a {color:#333; background-color:#fff;}
+		.mainNav li a:hover{background-color:#ed0002;}
+    .mainNav .content {display: none;margin-top:50px;background:#fff;overflow:hidden; }
+
+
+    em {    font: 12px/1.5em "Microsoft YaHei",Arial;}
+        .partA .xs4 img,.partB .pic { display: none; }
+        .col-8 {    width: 100%;}
+        .partB ul li p {   padding-top: 5px; }
+    .partB ul li em { position:initial; top: 10px; right: 20px;float:right}
+    .tab_videos { background:#ffebe4;overflow:hidden;padding:20px 0px;margin:10px 0px; }
+.tab_videos li,.tab_cygs li{ width:100%;float:left;margin-top:8px; }
+
+	#partnerbox{width:90%; margin:0 auto;}
+	 .link h2 {padding:0; font-size:16px; line-height:1.75em;}
+	.tab_header .icon{background-size:295%; width:40px; height:35px; margin:5px auto;}
+	.tab_header .icon_tab1{background-position:0 0;}
+.tab_header .icon_tab2{background-position:-40px 0;}
+.tab_header .icon_tab3{background-position:-80px 0;}
+.tab_header .hover .icon_tab1{background-position:0px -35px;}
+.tab_header .hover .icon_tab2{background-position:-40px -35px;}
+.tab_header .hover .icon_tab3{background-position:-80px -35px;}
+	.tab_header li{font-size:16px;}
+    .btn_bm {width: 100px;position:absolute;left:50%;margin-left:-50px; bottom:15px;}
+    .btn_bm img{ width:100%;}
+}
+
+@media screen and (max-width: 480px) {
+    .logo img { width:auto; height: 40px; margin-top: 7px; }
+    .navbar-toggle { margin-top: 12px; padding: 6px 10px; }
+        .navbar-toggle .icon-bar { width: 18px; height: 2px; }
+            .navbar-toggle .icon-bar + .icon-bar { margin-top: 2px; }
+    .collapse { top: 52px; }
+	.news_con{width:100%;}
+
+}

@@ -1,0 +1,125 @@
+﻿
+@model USP.Models.Entity.WebDeptDuty
+@{
+    ViewBag.Title = "Edit";
+}
+
+@section themes{
+    @*<link href="~/Static/Css/shop/usp.webdeptduty.edit.css" rel="stylesheet" />*@
+}
+
+<div id="p" class="easyui-panel" style="width: 100%; height: 100%">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            完善信息
+            <button id="btnReturn" type="button" class="btn btn-primary btn-xs pull-right">返回</button>
+        </div>
+        <div class="panel-body panel-fit">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.Reserve, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.Creator, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.CreateTime, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.Auditor, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.AuditTime, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.Canceler, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.CancelTime, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="form form-horizontal" role="form">
+                    <fieldset id="flt-baseInfo">
+                        <legend>基础信息</legend>
+                        <div class="form-group">
+                           
+                            <div class="form-group" id="fg-DeptName">
+                                @Html.LabelFor(model => model.DeptName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.DeptName, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.DeptName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-DeptDuty">
+                                @Html.LabelFor(model => model.DeptDuty, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.TextAreaFor(model => model.DeptDuty, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.DeptDuty, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            
+                            <div class="form-group" id="fg-Remark">
+                                @Html.LabelFor(model => model.Remark, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Remark, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Remark, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group form-actions">
+                        <div class="col-md-offset-2 col-xs-4 ">
+                            <button type="submit" class="btn btn-primary">保存</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@section scripts{
+    @*<script src="~/Static/Js/usp.webdeptduty.edit.js"></script>*@
+
+    <script type="text/javascript">
+     (function () {
+    usp.namespace("usp.webdeptduty.edit");
+    usp.webdeptduty.edit = {
+        init: function (btnReturnId, basePage) {
+            $(".datepicker").datetimepicker({
+                format: 'YYYY-MM-DD'
+            });
+
+            usp.webdeptduty.edit.eventInit.btnReturnInit(btnReturnId, basePage);
+        },
+        eventInit: {
+            btnReturnInit: function (id, basePage) {
+                $(id).on("click", function () {
+                    location.href = basePage;
+                    return false;
+                });
+            }
+        },
+    }
+})(this);
+        $(function () {
+            usp.init();
+            KindEditor.ready(function (K) {
+                window.editor = K.create("#DeptDuty", {
+                    resizeType: 1,
+                    allowPreviewEmoticons: false,
+                    allowImageUpload: true,//允许上传图片
+                    allowFileManager: true, //允许对上传图片进行管理
+                    uploadJson: '../../KindEdit/Upload', //上传图片的java代码，只不过放在jsp中
+                    fileManagerJson: '../../KindEdit/FileManager',
+                    afterUpload: function () { this.sync(); }, //图片上传后，将上传内容同步到textarea中
+                    afterBlur: function () { this.sync(); },   ////失去焦点时，将上传内容同步到textarea中
+                    items: [
+                        'source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code', 'cut', 'copy', 'paste',
+                        'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+                         'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+                        'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
+                        'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+                        'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image', 'multiimage',
+                        'flash', 'media', 'insertfile', 'table', 'hr', 'emoticons', 'baidumap', 'pagebreak',
+                        'anchor', 'link', 'unlink', 'justifyfull', ]
+                });
+            });
+            usp.webdeptduty.edit.init(
+                "#btnReturn",
+                "Index"
+                );
+        })
+    </script>
+}
+
+

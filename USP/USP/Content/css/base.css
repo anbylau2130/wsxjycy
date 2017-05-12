@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+/* 主休框架 */
+.warp{width:1004px; margin:auto;background:#fff; overflow:hidden;-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+-o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+-ms-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);behavior: url("../images/PIE.htc")/*tpa=http://www.nbjy.org.cn/Content/images/PIE.htc*/; position:relative; }
+ .news_tab2 em a:hover,.dd_tab span a:hover,.qz_tab .tit em a:hover{ color:#ffa200;}
+
+.header{ width:100%; margin:auto;}
+.container{ width:1000px; margin:auto;}
+
+.top{background:url("../images/top.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/top.jpg*/ no-repeat; height:195px; color:#FFFFFF;line-height:30px; position:relative;}
+.top a{ color:#FFFFFF;}
+.topNav{position:absolute;top:0px; left:0px; width:100%;}
+.logo{ position:absolute;top:58px; left:38px;}
+.nb_logo{ position:absolute;top:38px; right:10px;}
+.top .search{ position:absolute;bottom:0px;_bottom:-1px; right:10px;background: url("../images/search.gif")/*tpa=http://www.nbjy.org.cn/Content/images/search.gif*/ no-repeat 0px 0px;height:27px; width:320px; padding:4px 8px; overflow:hidden; }
+.top .search input{border:0px solid #ddd;}
+.top .search span{ float:left; margin:0px 3px;}
+.top .search .in{ background: url("../images/search.png")/*tpa=http://www.nbjy.org.cn/Content/images/search.png*/ no-repeat 10px center #fff;height:25px;line-height:25px; padding-left:30px; width:260px;  width:220px \9; }
+.top .search .go{ background: url("../images/go.gif")/*tpa=http://www.nbjy.org.cn/Content/images/go.gif*/ no-repeat 0px 0px ;height:25px; width:45px;line-height:25px; text-align:center; font-size:14px; font-weight:bold; color:#9b0505; }
+.top .search .go:hover{ background: url("../images/go1.gif")/*tpa=http://www.nbjy.org.cn/Content/images/go1.gif*/ no-repeat 0px 0px;color:#000;}
+.top .search a:hover{text-decoration:underline;}
+
+
+.navbar { margin: 0 auto; line-height:31px;height:31px; width: 1004px; background: url("../images/navbar.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/navbar.jpg*/ repeat-x 0px 0px;display:inline-block; overflow:hidden; }
+.navbar .time{ width:195px; text-align:center; background: url("../images/navbar_i.png")/*tpa=http://www.nbjy.org.cn/Content/images/navbar_i.png*/ no-repeat 9px 0px;}
+.navbar  .weather{width:600px;background: url("../images/navbar_i.png")/*tpa=http://www.nbjy.org.cn/Content/images/navbar_i.png*/ no-repeat 0px -31px; padding-left:25px;}
+
+/*网站尾部*/
+#box_foot {MARGIN: 10px auto 0px; WIDTH: 100%; background: url("../images/foot_bg.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/foot_bg.jpg*/ repeat-x 0px 0px;text-align:center; overflow: hidden; }
+.link { MARGIN: 0px auto;width: 1004px; height: 36px;  overflow: hidden; }
+    .link li { float: left; padding: 3px 5px; }
+    .link select { width: 171px; overflow:; }
+    .link li.t { width: 85px; padding: 0px; line-height: 35px; text-align: center; color: #fff; font-weight:bold;}
+
+.foot_nav{width:100%; padding-top:5px;line-height:30px; color:#999; }
+.foot_nav a{ padding:0px 5px; color:#000000;}
+.Copyright{width:100%; padding:5px 0px 10px;line-height:20px; }
+
+
+/*公共的样式*/
+.dd_tab{ width:100%; background:url("../images/red_tt.gif")/*tpa=http://www.nbjy.org.cn/Content/images/red_tt.gif*/ repeat-x bottom; display:inline-block;line-height:30px;height:30px; border-bottom:0px;}
+.dd_tab li{ float:left; padding:0px 20px; cursor:pointer; border-right:1px solid #f4e2d3; font-weight:bold; font-size:14px; color:#d20202;}
+.dd_tab li.current{ background:#fff; color:#d20202;border-top:3px #d20202 solid;border-left:1px solid #deb187;border-right:1px solid #deb187;margin-top:-2px; margin-left:-1px;display:inline-block;line-height:29px;height:29px;}
+
+.tab_list{background:#fff9e1;  }
+.tab_list .tit{width:100%; height:30px;line-height:30px; position:relative;background: url("../images/tz_tt.gif")/*tpa=http://www.nbjy.org.cn/Content/images/tz_tt.gif*/ no-repeat left top;}
+.tab_list .tit h3{padding-left:22px;font-size:14px; background:none; color:#FFFFFF; border:0px; margin:0px;height:30px;line-height:30px;  }
+.tab_list .tit em{ position:absolute;right:8px;top:0px; font-family:"宋体"; color:#999;}
+.tab_list ul{ padding:0px 0px}
+.tab_list li{ width:100%; line-height:35px;margin:0px auto; display:inline; font-size:14px; font-weight:bold; cursor:pointer;   }
+.tab_list ul li ul{ padding:5px 0px}
+.tab_list li a{ padding-left:15%;line-height:35px; background:url("../images/pro_list1.gif")/*tpa=http://www.nbjy.org.cn/Content/images/pro_list1.gif*/ no-repeat bottom left;display:block;border-bottom:1px solid #eedfd1; }
+.tab_list li a:hover{ color:#e75e00;background:url("../images/pro_list3.gif")/*tpa=http://www.nbjy.org.cn/Content/images/pro_list3.gif*/ no-repeat top left; }
+.tab_list li a.cur{ color:#e75e00;background:url("../images/pro_list3.gif")/*tpa=http://www.nbjy.org.cn/Content/images/pro_list3.gif*/ no-repeat top left; }
+
+.tab_list li ul{padding:4px 0px; text-align:center;}
+.tab_list li ul li { width:100%; line-height:25px;display:inline; font-size:12px; font-weight:normal; cursor:pointer;  }
+.tab_list li ul li a{ padding-left:28px;width:185px; line-height:25px; border:1px solid #fae0af;background:url("../images/arrow.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow.gif*/ no-repeat 20px 10px #ffe9c0;margin:0px auto;text-align:left;}
+.tab_list li ul li a:hover{ color:#fff;border:1px solid #ee491b;background:url("../images/arrow.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow.gif*/ no-repeat 20px 10px #ee491b; }
+.tab_list li ul li a.cur{ color:#fff;border:1px solid #ee491b;background:url("../images/arrow3.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow3.gif*/ no-repeat 20px 10px #ee491b; }
+
+.tab_list li ul ul{padding:px 0px; text-align:center;}
+.tab_list li ul ul li  { width:100%; line-height:25px;display:inline; font-size:12px; font-weight:normal; cursor:pointer;  }
+.tab_list li ul ul li a{ padding-left:35px;width:178px; line-height:25px; border:0px;background:url("../images/arrow.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow.gif*/ no-repeat 28px 10px;margin:0px auto;text-align:left;}
+.tab_list li ul ul li a:hover{ color:#000;border:0px;background:url("../images/arrow.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow.gif*/ no-repeat 28px 10px ; }
+.tab_list li ul ul li a.cur{ color:#ef1616;border:0px;background:url("../images/arrow.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow.gif*/ no-repeat 28px 10px ; }
+
+
+.tab_l01{  background:#fff;}
+.tab_l01 .tit{width:100%; height:30px;line-height:30px; position:relative;background: url("../images/tz_tt.gif")/*tpa=http://www.nbjy.org.cn/Content/images/tz_tt.gif*/ no-repeat left top;}
+.tab_l01 .tit h3{padding-left:22px;font-size:14px; background:none; color:#FFFFFF; border:0px; margin:0px;height:30px;line-height:30px;  }
+.tab_l01 .tit em{ position:absolute;right:8px;top:0px; font-family:"宋体"; color:#999;}
+.tab_l01 ul{ padding:10px 0px}
+.tab_l01 li{ line-height:28px; padding-left:22px;background:url("../images/arrow.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow.gif*/ no-repeat 13px;}
+
+
+.Tag_tab1{ border:1px solid #e3e6ed;background:url("../images/Tag_tab1.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/Tag_tab1.jpg*/ repeat-x 0px 0px; margin-bottom:10px; overflow:hidden;}
+.Tag_tab2{ background:url("../images/Tag_tab2.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/Tag_tab2.jpg*/ repeat-x 0px 0px;border:1px #ddd solid;border-top:3px #d20202 solid; overflow:hidden;}
+
+
+/*通用标题栏*/
+
+.T_gray{width:100%; height:35px;line-height:35px; position:relative;overflow:hidden;}
+.T_gray h3{padding-left:15px;font-size:14px;background:url("../images/arrow4.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow4.gif*/ no-repeat 13px;padding-left:30px;}
+.T_gray em{ position:absolute;right:8px;top:0px; font-family:"宋体"; color:#999;}
+.T_gray span{ position:absolute;left:100px;top:0px; font-family:"宋体"; color:#999;}
+.T_gray span a{ border:1px solid #e3e6ed; padding:5px 8px; background:#fff;}
+.T_gray span a:hover{border:1px solid #FF6600; color:#FF6600}
+
+.T_heng{width:100%; height:25px;line-height:25px;background:url("../images/titBg_03.gif")/*tpa=http://www.nbjy.org.cn/Content/images/titBg_03.gif*/ repeat-x 10px  ; position:relative;overflow:hidden;}
+.T_heng h3{padding-left:15px;font-size:14px;eight:25px;line-height:25px;background:#fff; margin-left:15px; width:70px; float:left;color:#e35000;}
+.T_heng em{ position:absolute;right:0px;top:0px; font-family:"宋体"; color:#999;background:#fff; width:60px;  text-align:center; }
+
+/*通用新闻+时间格式*/
+.Tag_news { padding:10px 0px}
+.Tag_news li{ line-height:28px;}
+.Tag_news  li a{ float:left; width:70%;overflow:hidden;background:url("../images/arrow2.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow2.gif*/ no-repeat 13px;padding-left:22px;}
+.Tag_news  li span{ float:right; width:23%; font-size:12px; color:#888;}
+
+.Tag_news1 { padding:10px 0px}
+.Tag_news1 li{ line-height:25px;}
+.Tag_news1  li a{ background:url("../images/arrow.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow.gif*/ no-repeat 13px;padding-left:22px;}
+.Tag_news1  li span{ float:right; width:23%; font-size:12px; color:#888;}
+
+.Tag_news2{ padding:10px 0px}
+.Tag_news2 li{ line-height:28px; padding-left:22px;background:url("../images/arrow.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow.gif*/ no-repeat 13px;}
+
+.news_tab4 { padding:10px 0px}
+.news_tab4li{ line-height:28px;}
+.news_tab4 li h3{ float:left; width:70%;overflow:hidden;background:url("../images/arrow2.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow2.gif*/ no-repeat 13px;padding-left:22px;font-weight:100;}
+.news_tab4  li span{ float:right; width:23%; font-size:12px; color:#888;}
+
+/*政务公开左*/
+
+
+.zwgk_tab  h3{color:#f45314;height:36px; line-height:36px; background:url("../images/link_bg.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/link_bg.jpg*/ #ff8400; text-indent:10px; color:#fff; font-size:14px;display: inline;overflow:hidden;}
+.zwgk_tab ul{ margin:10px; display:inline-block;}
+.zwgk_tab li{margin:2px auto;float:left; width:100%; height:36px; line-height:36px;}
+.zwgk_tab li a{width:100%; border:1px solid #e3e6ed;background:#f7f8fc;display:inline-block; overflow:hidden; }
+.zwgk_tab li i{ width:25px; height:25px;background:url("../images/icon_zw.png")/*tpa=http://www.nbjy.org.cn/Content/images/icon_zw.png*/ no-repeat 0px -3px;display: inline-block;vertical-align: middle; margin-left:3px;}
+.zwgk_tab li i.ico_02{background:url("../images/icon_zw.png")/*tpa=http://www.nbjy.org.cn/Content/images/icon_zw.png*/ no-repeat -25px -3px;}
+.zwgk_tab li i.ico_03{background:url("../images/icon_zw.png")/*tpa=http://www.nbjy.org.cn/Content/images/icon_zw.png*/ no-repeat 0px -28px;}
+.zwgk_tab li i.ico_04{background:url("../images/icon_zw.png")/*tpa=http://www.nbjy.org.cn/Content/images/icon_zw.png*/ no-repeat -25px -28px;}
+.zwgk_tab li i.ico_05{background:url("../images/icon_zw.png")/*tpa=http://www.nbjy.org.cn/Content/images/icon_zw.png*/ no-repeat 0px -52px;}
+.zwgk_tab li i.ico_06{background:url("../images/icon_zw.png")/*tpa=http://www.nbjy.org.cn/Content/images/icon_zw.png*/ no-repeat -25px -52px;}
+.zwgk_tab li i.ico_07{background:url("../images/icon_zw.png")/*tpa=http://www.nbjy.org.cn/Content/images/icon_zw.png*/ no-repeat 0px -77px;}
+.zwgk_tab li i.ico_08{background:url("../images/icon_zw.png")/*tpa=http://www.nbjy.org.cn/Content/images/icon_zw.png*/ no-repeat -25px -77px;}
+.zwgk_tab li a:hover{border:1px solid #fae0af; background:#ffe9c0; color:#CC3300;}
+
+/*互动交流 */
+.explain{border-top:1px solid #e3e6ed;height: 95px; padding-top:10px;overflow: hidden;margin-bottom: 6px;text-align: left;line-height: 170%;}
+.explain img { width: 95px; height: 95px;float: left;margin-right: 10px;}
+
+.btnBox {   overflow: hidden;   margin-bottom: 10px;  text-align: right; position:absolute;right:0px;top:5px}
+.btnBox a{ background:#e73414; display:inline-block;-moz-border-radius: 4px;-webkit-border-radius: 4px; border-radius: 4px; color:#FFF; CURSOR: pointer; display: inline-block; font-size:12px; color:#FFFFFF;text-align:center; overflow:hidden; padding:3px 8px;}
+.btnBox a:hover{ background:#16c1f3;color:#FFF;}
+/*登陆 */
+.login_tab{width:100%;}
+.login_tab .tt{width:100%;background:url("../images/red_tt.gif")/*tpa=http://www.nbjy.org.cn/Content/images/red_tt.gif*/ repeat-x bottom;height:30px;line-height:30px; }
+.login_tab h3{ font-size:14px; color:#d20202;background:url("../images/arrow4.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow4.gif*/ no-repeat 14px; padding-left:28px; overflow:hidden;height:30px;line-height:30px; }
+
+.btn_sub{ background:#e73414; display:inline-block;-moz-border-radius: 4px;-webkit-border-radius: 4px; border-radius: 4px; color:#FFF; CURSOR: pointer;  HEIGHT:25px; line-HEIGHT:25px;display: inline-block; font-size:14px; color:#FFFFFF; font-weight:bold; text-align:center; overflow:hidden; width:68px;behavior: url("img/PIE.htc")/*tpa=http://www.nbjy.org.cn/Content/css/img/PIE.htc*/; position:relative\9;}
+
+.btn_reg{ background:#76bade; display:inline-block;-moz-border-radius: 4px;-webkit-border-radius: 4px; border-radius: 4px; color:#FFF; CURSOR: pointer;  HEIGHT:25px; line-HEIGHT:25px;display: inline-block; font-size:14px; color:#FFFFFF; font-weight:bold; text-align:center; overflow:hidden; width:68px;behavior: url("img/PIE.htc")/*tpa=http://www.nbjy.org.cn/Content/css/img/PIE.htc*/; position:relative\9;}
+
+.btn_sub:hover,.btn_reg:hover{background-color: #888;color:#fff; }
+
+/*分页码*/
+.page {	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 23px; MARGIN: 3px;MARGIN-top:20px; PADDING-TOP: 3px; TEXT-ALIGN: center;font-size:12px;
+}
+.page A {
+	BORDER-RIGHT: #eee 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #eee 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; MARGIN: 2px; BORDER-LEFT: #eee 1px solid; COLOR: #036cb4; PADDING-TOP: 2px; BORDER-BOTTOM: #eee 1px solid; TEXT-DECORATION: none;font-size:12px;
+}
+.page A:hover {
+	BORDER-RIGHT: #999 1px solid; BORDER-TOP: #999 1px solid; BORDER-LEFT: #999 1px solid; COLOR: #666; BORDER-BOTTOM: #999 1px solid
+}
+.page A:active {
+	BORDER-RIGHT: #999 1px solid; BORDER-TOP: #999 1px solid; BORDER-LEFT: #999 1px solid; COLOR: #666; BORDER-BOTTOM: #999 1px solid
+}
+.page .current {
+	BORDER-RIGHT: #db0f06 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #db0f06 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; MARGIN: 2px; BORDER-LEFT: #db0f06 1px solid; COLOR: #db0f06; PADDING-TOP: 2px; BORDER-BOTTOM: #db0f06 1px solid; BACKGROUND-COLOR:#fff;
+}
+.page .disabled {
+	BORDER-RIGHT: #eee 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #eee 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; MARGIN: 2px; BORDER-LEFT: #eee 1px solid; COLOR: #ddd; PADDING-TOP: 2px; BORDER-BOTTOM: #eee 1px solid
+}
+

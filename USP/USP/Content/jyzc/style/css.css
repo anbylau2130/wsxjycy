@@ -1,0 +1,117 @@
+@charset "utf-8";
+/*update 20140827*/
+body, ol, ul, li, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select { margin: 0; padding: 0; }
+body { font: 14px "微软雅黑"; background: #ccc; -webkit-text-size-adjust: 100%; line-height: 28px; background: #fff9e6; }
+A { OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; }
+/*鼠标点上去不出现虚线。*/
+a { color: #172c45; text-decoration: none; }
+    a:hover { color: #cd0200; text-decoration: none; }
+em { font-style: normal; }
+ul, li { list-style: none; }
+img { border: 0; vertical-align: middle; }
+/*链接上去不出现蓝线。*/
+table { border-collapse: collapse; border-spacing: 0; }
+p { word-wrap: break-word; }
+.clear { LINE-HEIGHT: 0px; HEIGHT: 0px; CLEAR: both; }
+.fl { float: left; display: inline; }
+.fr { float: right; display: inline; }
+.mt8 { margin-top: 8px; }
+.mt12 { margin-top: 12px; }
+.mt15 { margin-top: 15px; }
+.mb10 { margin-bottom: 10px; }
+
+/*颜色*/
+.red { color: #FF0000; font-weight: bold; }
+.yellow { color: #FF9900; }
+.blue { color: #0066cc; }
+.green { color: #14c958; }
+/**/
+#wrapper { MARGIN: 0px auto; WIDTH: 100%; }
+/*网站头部样式*/
+#box_head { MARGIN: 0px auto; WIDTH: 100%; height: 340px; background: url("../images/top.jpg")/*tpa=http://www.nbjy.org.cn/content/jyzc/images/top.jpg*/ no-repeat top center #cd0200; }
+#box_main { MARGIN: 10px auto; WIDTH: 1004px; text-align: left; }
+.container { MARGIN: 0px auto; WIDTH: 100%; min-height: 450px; }
+.partA { background: url("../images/partA.jpg")/*tpa=http://www.nbjy.org.cn/content/jyzc/images/partA.jpg*/ no-repeat bottom center #d6ccca;  }
+.partB { background: url("../images/partB.jpg")/*tpa=http://www.nbjy.org.cn/content/jyzc/images/partB.jpg*/ no-repeat bottom center #fffdf6;}
+.partC { background: url("../images/partC.jpg")/*tpa=http://www.nbjy.org.cn/content/jyzc/images/partC.jpg*/ no-repeat top center #ebebe6;/*background-size:100% 100%;*/ }
+
+/*网站尾部*/
+#box_foot { MARGIN: 0px auto; WIDTH: 100%; background: #5b5b5b; overflow: hidden; }
+.Copyright { MARGIN: 0px auto; width: 1004px; font-size: 17px; line-height: 30px; padding: 22px 0px; text-align: right; color: #fff; }
+    .Copyright a { color: #666; }
+
+/*首页*/
+.content { MARGIN: 0px auto; padding: 25px 0px; WIDTH: 1004px; overflow: hidden; }
+    .content .tit { background: url("../images/tit_bg.png")/*tpa=http://www.nbjy.org.cn/content/jyzc/images/tit_bg.png*/ no-repeat right center; height: 55px;}
+        .content .tit h3 { font-size: 36px; color: #FF0000; line-height: 55px; }
+
+.hot { MARGIN-top: 50px; background: #fff; border: 1px solid #ddd; border-bottom: 4px solid #FF0000; height: 145px; position: relative; }
+    .hot .pic { float: left; width: 20%; position: absolute; top: -31px; text-align: center; }
+        .hot .pic img { width: 120px; border: 1px solid #ddd; }
+    .hot h3 { float: right; width: 80%; font-size: 48px; color: #FF0000; line-height: 55px; padding-top: 15px; }
+
+.Tab-01 {MARGIN: 20px auto; WIDTH: 100%;  }
+    .Tab-01 dd { font-size: 29px; color: #000; font-weight: 600; line-height: 60px; padding-top: 10px; }
+        .Tab-01 dd em { color: #FF0000; }
+    .Tab-01 dt span { background: #bdb8b2; padding: 0px 28px; -moz-border-radius: 6px; -khtml-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; line-height: 46px; margin: 6px; display: inline-block; font-size: 16px; color: #fff; font-weight: 500; }
+        .Tab-01 dt span.bg1 { background: #bdb8b2; }
+        .Tab-01 dt span.bg2 { background: #d6ccc7; }
+        .Tab-01 dt span.bg3 { background: #98d2db; }
+        .Tab-01 dt span.bg4 { background: #eb9996; }
+        .Tab-01 dt span.bg5 { background: #9eb8d5; }
+        .Tab-01 dt span.bg6 { background: #cbce83; }
+        .Tab-01 dt span.bg7 { background: #e9b188; }
+        .Tab-01 dt span.bg8 { background: #bbabd7; }
+        .Tab-01 dt span.bg9 { background: #92b888; }
+
+
+.QA { MARGIN: 0px ; WIDTH: 79%;height:680px; }
+    .QA dl {border-bottom:1px dotted #ccc;padding:15px 0px;WIDTH: 90%; }
+
+.Tab-03 { MARGIN: 20px auto; WIDTH: 100%;}
+.Tab-03 li{width:19%;margin:0.5%;float:left;display:inline-block; }
+.Tab-03 li a{display:block; background: url("../images/blank.png")/*tpa=http://www.nbjy.org.cn/content/jyzc/images/blank.png*/;border: 1px solid #fff;padding:10px;}
+    .Tab-03 li h3 {color: #000;}
+    .Tab-03 li p {  }
+    .Tab-03 li p.tel { color: #b79c9b; font-weight: 600;font-size:16px; background: url("../images/tel.png")/*tpa=http://www.nbjy.org.cn/content/jyzc/images/tel.png*/ no-repeat 0px center;padding-left:15px; }
+    .Tab-03 li a:hover { background:#f9f7eb;display:block;}
+/*文章列表*/
+.news_list { padding: 15px; }
+    .news_list li { width: 100%; margin: auto; border-bottom: 1px dashed #ebd99f; margin: 5px 0px; height: 45px; line-height: 45px; }
+        .news_list li h2 { font-size: 16px; font-weight: 100; line-height: 45px; float: left; width: 87%; background: url("../images/bul_05.gif")/*tpa=http://www.nbjy.org.cn/content/jyzc/images/bul_05.gif*/ no-repeat 15px center; padding-left: 36px; overflow: hidden; }
+            .news_list li h2 a { color: #3c3b3a; }
+                .news_list li h2 a:hover { color: #f80000; }
+        .news_list li span { float: left; width: 8%; font-weight: normal; font-size: 14px; color: #6f6f6f; }
+        .news_list li p { text-indent: 2em; line-height: 26px; color: #6f6f6f; }
+/*文章详细*/
+.news_detail { padding: 19px; text-align: left; overflow: hidden; margin-bottom: 20px; }
+    .news_detail .fy1 a { float: left; width: 90%; padding-left: 40px; font-size: 14px; line-height: 30px; }
+    .news_detail .fy1 h2 { color: #333; float: left; font-weight: normal; }
+    .news_detail .fy1 span { color: #045ab1; font-size: 14px; float: left; }
+
+    .news_detail h3 { font-size: 22px; font-weight: bold; color: #D62916; FONT-FAMILY: "微软雅黑"; line-height: 55px; margin-bottom: 10px; text-align: center; }
+    .news_detail .time { border-bottom: 1px dotted #ddd; text-align: center; margin-bottom: 18px; color: #999999; }
+        .news_detail .time span { padding: 5px; color: #999999; }
+        .news_detail .time a { color: #999999; }
+
+    .news_detail .news_text { font-size: 16px; text-align: justify; text-justify: inter-ideograph; line-height: 33px; }
+    .news_detail p { text-indent: 2em; text-align: justify; text-justify: inter-ideograph; padding-top: 10px; }
+     .news_detail p span { color: #1b70e2; }
+
+.qm_show { padding: 25px 0px; }
+    .qm_show DL { width: 271px; margin: 15px 30px; float: left; display: inline; height: 275px; line-height: 45px; background: url("../images/p_li.jpg")/*tpa=http://www.nbjy.org.cn/content/jyzc/images/p_li.jpg*/ no-repeat; padding-top: 10px; }
+    .qm_show DT { width: 250px; height: 190px; margin: 10px; display: inline; margin-bottom: 0px; text-align: center; }
+        .qm_show DT img { width: 250px; height: 190px; }
+    .qm_show h3 { margin: 5px 10px; line-height: 25px; font-size: 14px; text-align: left; background: none; }
+    .qm_show DD { margin: 0px 10px; line-height: 25px; text-align: right; color: #7c6f46; }
+
+/*列表分页*/
+.lb_fy { margin-top: 40px; margin-bottom: 20px; font-size: 14px; line-height: 30px; overflow: hidden; }
+    .lb_fy p { float: left; text-align: center; width: 100%; }
+        .lb_fy p span { color: #ff0000; font-weight: bold; }
+    .lb_fy .fy { float: left; width: 100%; }
+    .lb_fy a { color: #000; width: 52px; height: 30px; line-height: 30px; display: block; float: left; border: 1px solid #e5e5e5; text-align: center; margin: 0 5px; background: #fff; display: inline; cursor: pointer; }
+        .lb_fy a:hover { color: #fff; background: #e20000; }
+    .lb_fy .pagerBtn { width: 52px; text-align: center; height: 30px; line-height: 30px; float: left; border: 1px solid #e5e5e5; color: #fff !important; background: #d21503; margin: 0px !important; }
+.fy_left { float: left; width: 25%; }
+.fy_right { float: right; width: 62%; }

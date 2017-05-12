@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "ServiceGuide";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+
+<link href="/Content/css/ny.css" rel="stylesheet" type="text/css" />
+<div class="container main">
+    <div class="detail">
+        <div class="crumbs">
+            当前位置：
+            <a href='/cn/index.html'>首页</a>
+            &gt;&gt; <a href='/cn/bszn.html'>办事指南</a>
+        </div>
+        <div class="news_detail">
+            <h3>失业登记</h3>
+            <p class="time" style=" font-size:12px;"><span>发布日期：2015-07-06</span><span>阅读次数：15892</span><span>来源：登记监测统计科</span></p>
+            <table border="0" cellpadding="0" cellspacing="0" class="TRS_Editor" width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <table width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td align="right" class="F999" valign="middle" width="10%">业务名称：</td>
+                                        <td class="xt3" colspan="3" valign="top" width="475">失业登记</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" class="F999" valign="middle" width="93">服务对象：</td>
+                                        <td valign="top" width="198">本市城镇常住失业人员</td>
+                                        <td align="right" class="F999" valign="middle" width="15%">受理部门：</td>
+                                        <td valign="top" width="182">全部下放县（市）区</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" class="F999" valign="middle" width="93">受理地址：</td>
+                                        <td colspan="3" valign="top" width="475">户籍所在地（常住地）的县（市）区就业管理服务部门或街道（乡镇）劳动保障站（所）</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" class="F999" valign="middle" width="93">联&nbsp;系&nbsp;人：</td>
+                                        <td valign="top" width="198">毛炯</td>
+                                        <td align="right" class="F999" valign="middle" width="94">联系电话：</td>
+                                        <td valign="top" width="182">0574—83867203</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" class="F999" valign="middle" width="93">受理时间：</td>
+                                        <td colspan="3" valign="top" width="198">上午9：00-11：30，下午13:30-17:00 （备注：各县市区街道公共就业服务机构视当地作息时间）</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tab_top5">
+                                <ul>
+                                    <li class="current" id="tab021" onclick="set('tab02',1,5)">设立依据</li>
+                                    <li id="tab022" onclick="set('tab02',2,5)">受理条件</li>
+                                    <li id="tab023" onclick="set('tab02',3,5)">申请材料</li>
+                                    <li id="tab024" onclick="set('tab02',4,5)">办理流程</li>
+                                    <li id="tab025" onclick="set('tab02',5,5)">办理流程图</li>
+                                </ul>
+                            </div>
+
+                            <div class="tab_top5dd" id="tab02_1">
+                                <p>１、人力资源和社会保障部《关于修改〈就业服务与就业管理规定〉的决定》（第23号令）； ２、浙江省人力资源和社会保障厅《关于印发浙江省就业和失业登记管理办法的通知》（浙人社发〔2013〕111号）；３、关于印发宁波市就业和失业登记管理办法的通知（甬人社发[2016]40号）。</p>
+                            </div>
+
+                            <div class="tab_top5dd" id="tab02_2" style="display:none;">
+                                <!--			<p>办理失业登记，应由本人如实填写《宁波市失业人员登记表》，并提供居民身份证、户口簿（非本市户籍人员提供《浙江省居住证》或《浙江省临时居住证》）、一寸近照两张及以下相关材料： （一）各类学校毕（肄）业没有就业经历的，提供毕业证书或肄业证书；（二）与用人单位终止或者解除劳动关系的，提供劳动合同、终止或者解除劳动关系证明书、《宁波市失业人员登记证明书》；（三）与原单位关系不适用于《中华人民共和国劳动法》的需提供原单位出具的离职、辞职或解聘证明；（四）从事个体经营、开办私营企业或民办非企业的停业人员，提供市场监管部门或民政部门出具的停业证明；（五）军人退出现役且未纳入国家统一安置的，提供安置部门出具的相关证明或证件；（六）刑满释放、假释、监外执行的，提供司法（公安）部门证明或户籍所在地街道办事处（镇政府）证明；（七）人力社保部门规定的其他材料。</p>-->
+                                <p>允许法定劳动年龄内，有劳动能力、有就业要求，处于无业状态的城镇常住人员可在常住地的公共就业和人才服务机构进行失业登记。本地户籍的应到户籍地公共就业和人才服务机构进行失业登记，非本地户籍的可到常住地公共就业和人才服务机构进行失业登记</p>
+                            </div>
+
+                            <div class="tab_top5dd" id="tab02_3" style="display:none;">
+                                <!--			<p>（一）就业转失业人员： 1. 失业人员档案，须包含以下材料：劳动合同、终止（解除）劳动合同证明书、失业人员登记证明书、社会保险中（终）止缴费通知表（社保关系在市十区外的用人单位还须提供失业人员失业保险关系转迁证明）； 2. 本人身份证和户口本； 3. 一寸近照2张。 （二）新增失业人员： 1. 毕业证书； 2. 本人身份证和户口本； 3. 一寸近照2张。</p>-->
+                                <p>办理失业登记，应由本人如实填写《宁波市失业人员登记表》，并提供居民身份证、户口簿（非本市户籍人员提供《浙江省居住证》或《浙江省临时居住证》）、一寸近照两张及以下相关材料： （一）各类学校毕（肄）业没有就业经历的，提供毕业证书或肄业证书；（二）与用人单位终止或者解除劳动关系的，提供劳动合同、终止或者解除劳动关系证明书、《宁波市失业人员登记证明书》；（三）与原单位关系不适用于《中华人民共和国劳动法》的需提供原单位出具的离职、辞职或解聘证明；（四）从事个体经营、开办私营企业或民办非企业的停业人员，提供市场监管部门或民政部门出具的停业证明；（五）军人退出现役且未纳入国家统一安置的，提供安置部门出具的相关证明或证件；（六）刑满释放、假释、监外执行的，提供司法（公安）部门证明或户籍所在地街道办事处（镇政府）证明；（七）人力社保部门规定的其他材料。</p>
+                            </div>
+
+                            <div class="tab_top5dd" id="tab02_4" style="display:none;">
+                                <p>1. 由经办人员核实资料； 2. 符合条件的由工作人员发放《宁波市失业人员登记表》进行填写，不符合条件的退回。</p>
+                            </div>
+
+                            <div class="tab_top5dd" id="tab02_5" style="display:none;">
+                                <p><img src="/Upload/QQ截图20151010093143_d12b457b-c35c-4bdc-93f0-cb94e830f477.jpg" /></p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                &nbsp;
+
+            </p>
+            <div class="fy">
+                <hidden>
+                    【<a href="javascript:window.print();">打印</a>】【<a href="javascript:window.close();">关闭窗口</a>】
+                </hidden>
+            </div>
+            <div class="fy1">
+                <a href="/cn/bszn/2125.html"><span>上一篇：</span>大学生网络创业认定</a>
+                <a><span>下一篇：</span>暂无</a>
+            </div>
+        </div>
+    </div>
+    </div>

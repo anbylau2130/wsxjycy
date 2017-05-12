@@ -1,0 +1,215 @@
+@charset "utf-8";
+/* 基础样式 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, iframe { display: block; }
+body, div, i, em, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, span { margin: 0; padding: 0; /*word-break:break-all*/ }
+ul, li, dl, dt, dd, ol { list-style: none; }
+/*input[type="text"], input[type="search"] { -webkit-appearance: none; -webkit-tap-highlight-color: #fff; outline: 0; border: 1px solid #ddd; padding: 0px 4px; line-height: 23px; height: 23px; }
+input[type="button"] { background: #f90; line-height: 23px; color: #fff; padding: 0px 6px; }
+input[type="checkbox"] { margin: 0px 3px 0px 4px; }*/
+body, button, input, select, textarea, td { outline-style: none; font: 16px/1.5em "Microsoft YaHei",Arial; }
+hr { height: 0; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #eee; }
+pre { overflow: auto; }
+
+/**公共的**/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, textarea, p, blockquote, center { margin: 0 auto; padding: 0; }
+body {  position: relative; text-align: center; }
+ol, ul { list-style: none; }
+
+img { border: 0; }
+em, i, cite, b { font-style: normal; font-weight: normal; }
+
+.clearfix { *zoom: 1; clear: both; }
+    .clearfix:before, .clearfix:after { display: table; line-height: 0; content: ""; }
+    .clearfix:after { clear: both; }
+
+.per { position: relative; }
+.pef { position: fixed; }
+
+h1, .h1 { font-size: 36px; }
+h2, .h2 { font-size: 32px; line-height:2em;}
+h3, .h3 { font-size: 20px; font-weight: 600; line-height:1.8em; }
+h4, .h4 { font-size: 16px;font-weight: 500;  }
+h5, .h5 { font-weight: 600; }
+h6, .h6 { font-size: 12px; }
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+**************************************** 文字与背景 ****************************************
+------------------------------------------------------------------------------------------------------------------------
+*/
+a { cursor: pointer; background: transparent; color: #fff; text-decoration: none; }
+    a:hover, a:focus { color: #f60; outline: 0; text-decoration: none;border:0px; }
+    a, a:visited { text-decoration: none; outline: 0; }
+
+em { font: 16px/1.5em "Microsoft YaHei",Arial; }
+    em a { color: #fec401; }
+        em a:hover { color: #ffea00; }
+h2 em{ border: 1px solid #fec401; padding:5px 15px;margin:5px 8px;}
+
+/*iiiiiiin属性*/
+i { display: inline-block; vertical-align: middle; }
+/*
+------------------------------------------------------------------------------------------------------------------------
+**************************************** 表单 ****************************************
+------------------------------------------------------------------------------------------------------------------------
+*/
+.inputU { background-color: #fff; padding: 0px 5px; border: 1px solid #ddd; line-height: 23px; height: 23px; }
+input, select { vertical-align: middle; }
+input, button, select, textarea { outline: none; }
+
+button, input, select, textarea { margin: 0; font-size: 100%; vertical-align: middle;_height: 20px; }
+button, input { *overflow: visible; line-height: normal; }
+    button::-moz-focus-inner, input::-moz-focus-inner { padding: 0; border: 0; }
+    button, html input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+    label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] { cursor: pointer; }
+    input[type="search"] { -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; -webkit-appearance: textfield; }
+        input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+textarea { overflow: auto; vertical-align: top; border: 1px solid #ddd; }
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input { display: inline-block; height: 20px; padding: 4px 6px; font-size: 14px; line-height: 20px; color: #555555; vertical-align: middle; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; background-color: #ffffff; border: 1px solid #cccccc; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); -webkit-transition: border linear 0.2s, box-shadow linear 0.2s; -moz-transition: border linear 0.2s, box-shadow linear 0.2s; -o-transition: border linear 0.2s, box-shadow linear 0.2s; transition: border linear 0.2s, box-shadow linear 0.2s; }
+    textarea:focus,
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="datetime"]:focus,
+    input[type="datetime-local"]:focus,
+    input[type="date"]:focus,
+    input[type="month"]:focus,
+    input[type="time"]:focus,
+    input[type="week"]:focus,
+    input[type="number"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus,
+    input[type="search"]:focus,
+    input[type="tel"]:focus,
+    input[type="color"]:focus,
+    .uneditable-input:focus { border-color: rgba(82, 168, 236, 0.8); outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6); -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6); }
+input[type="radio"],
+input[type="checkbox"] { margin: 4px 0 0; margin-top: 1px \9; *margin-top: 0; line-height: normal; }
+textarea { min-height: 100px; }
+/**************按钮**********************/
+.btn { display: inline-block; padding: 6px 12px;_padding: 0px 12px;*padding: 0px 12px;  text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; color: #333333; background:#feeec8; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid #febc00; -moz-border-radius: 4px;-khtml-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px; }
+    .btn:hover, .btn:focus { color: #fff; text-decoration: none; background-color: #fe8f00; border-color: #d17907;  }
+    .btn + .btn { margin-left: 0.3em; }
+
+.btn-ok { background: #ed0002; border: 1px solid #cc0305; text-align: center; }
+.btn-ok:hover { background: #cc0305;border: 1px solid #cc0305; }
+
+.btn-cancel{ background: #666; border: 1px solid #555; text-align: center; }
+.btn-cancel:hover { background: #444;border: 1px solid #333;  }
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+**************************************** 栅格 ****************************************
+------------------------------------------------------------------------------------------------------------------------
+*/
+/*12列*/
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 { float: left; min-height: 1px; position: relative; overflow: hidden; }
+.col-12 { float: none; }
+.col-1 { width: 8.33333%; }
+.col-2 { width: 16.6667%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.3333%; }
+.col-5 { width: 41.6667%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.3333%; *width: 56%; }
+.col-8 { width: 66.6667%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.3333%; }
+.col-11 { width: 91.6667%; }
+.col-12 { width: 100%; }
+
+.row-1, .row-2, .row-3, .row-4, .row-5, .row-6, .row-7, .row-8, .row-9, .row-10, .row-11, .row-12 { float: left; min-height: 1px; position: relative; overflow: hidden; }
+
+.row-5 { width: 50%; }
+.row-12 {  width: 100%; }
+
+.col-offset-12 { margin-left: 100%; }
+.col-offset-11 { margin-left: 91.66666667%; }
+.col-offset-10 { margin-left: 83.33333333%; }
+.col-offset-9 { margin-left: 75%; }
+.col-offset-8 { margin-left: 66.66666667%; }
+.col-offset-7 { margin-left: 58.33333333%; }
+.col-offset-6 { margin-left: 50%; }
+.col-offset-5 { margin-left: 41.66666667%; }
+.col-offset-4 { margin-left: 33.33333333%; }
+.col-offset-3 { margin-left: 25%; }
+.col-offset-2 { margin-left: 16.66666667%; }
+.col-offset-1 { margin-left: 8.33333333%; }
+.col-offset-0 { margin-left: 0; }
+
+
+.mb20 { margin-bottom: 20px; margin-right: 20px; overflow: hidden; }
+    .mb20 img { display: block; width: 100%; }
+.mt20 { margin-top: 20px; }
+.ml20 { margin-left: 20px; }
+.pl10 { padding-left:10px;}
+.pp10 { padding:10px;}
+
+.dot-01 { background: url("../images/arrow.gif")/*tpa=http://www.nbjy.org.cn/content/cyds/images/arrow.gif*/ no-repeat 10px; width: 15px; height: 25px; color: #fff; font-size: 12px; }
+.dot-02 { background: url("../images/arrow3.gif")/*tpa=http://www.nbjy.org.cn/content/cyds/images/arrow3.gif*/ no-repeat 10px; width: 25px; height: 25px; color: #fff; font-size: 12px; }
+
+i { width: 25px; height: 25px; color: #fff; font-size: 12px; margin: 0px;  background-image: url("../images/icon.png")/*tpa=http://www.nbjy.org.cn/content/cyds/images/icon.png*/; }
+.icon-email { background-position: 0px 0px; }
+.icon_home { background-position: -61px 0px; }
+
+
+/*分页*/
+.pagination { text-align: center; margin-top: 25px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    .pagination a, .pagination span { display: inline-block; width: 25px; height: 25px; line-height: 25px; margin: 0 4px; margin-bottom: 5px; border: 1px solid #dbdee2; color: #8c8c8c; cursor: default; background-color: #fcfcfc; }
+    .pagination a { text-decoration: none; border: 1px solid #dbdee2; cursor: pointer; }
+    .pagination .current { background-color: #58a4f3; color: #fff; border: 1px solid #58a4f3; cursor: default; }
+    .pagination .prev, .pagination .next { text-indent: -9999px; border: 1px solid #dbdee2; }
+    .pagination .current.prev { background: url("../images/prev-disable.png")/*tpa=http://www.nbjy.org.cn/content/cyds/images/prev-disable.png*/ no-repeat center center; }
+    .pagination .current.next { background: url("../images/next-disable.png")/*tpa=http://www.nbjy.org.cn/content/cyds/images/next-disable.png*/ no-repeat center center; }
+    .pagination .prev { background: url("../images/prev.png")/*tpa=http://www.nbjy.org.cn/content/cyds/images/prev.png*/ no-repeat center center; }
+    .pagination .next { background: url("../images/next.png")/*tpa=http://www.nbjy.org.cn/content/cyds/images/next.png*/ no-repeat center center; }
+     #pagination span {
+            cursor: pointer;
+        }
+
+
+.fl { float: left; display: inline; }
+.fr { float: right; display: inline; }
+
+.al { text-align: left; }
+.ac { text-align: center; }
+.ar { text-align: right; }
+/*文字大小*/
+.xs2 { font-size: 14px !important; }
+.xs3 { font-size: 16px !important; }
+.xs4 { font-size: 18px !important; }
+.xs5 { font-size: 20px !important; }
+
+/*文字颜色*/
+.c_red { color: #FF0000; }
+.c_orange { color: #fe8f00; }
+.c_white { color: #fff; }
+.c_blur { color: #0099FF; }
+.c_grey { color: #999; }
+.c_fzbold { font-weight: bold; }
+
+/*背景*/
+.bg_f4 { background-color: #f4f4f4; }
+.bg_blur { background-color: #5bc0de; color: #FFFFFF; }
+.bg_pink1{background-color:#aa5aee; color:#ffffff;}
+.bg_red { background-color: #ee4136; color: #FFFFFF; }
+.bg_orange { background-color: #f39612; color: #FFFFFF; }
+.bg_green { background-color: #5cb85c; color: #FFFFFF; }
+.bg_pink { background-color: #dc639f;color: #FFFFFF; }
+.bg_violet { background-color: #846fdf;color: #FFFFFF; }

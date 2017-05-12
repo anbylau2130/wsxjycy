@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+.frist{ width:1000px; height:630px; margin:auto; background:url("../images/z_first.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/z_first.jpg*/; padding-top:5px;}
+.header{ width:100%; margin:auto; overflow:hidden;}
+.header em{background:url("../images/zz-return.png")/*tpa=http://www.nbjy.org.cn/Content/images/zz-return.png*/ no-repeat left center; padding-left:20px;font-size:14px;color:#000;font-weight:bold; padding-top:0px; text-align:left}
+.sideBar{ margin-left:300px;font-size:14px;color:#fff; font-weight:bold;line-height:30px;}
+.sideBar a{color:#fff;width:143px; padding-left:20px;}
+.sideBar  li{ position:relative;}
+.sideBar a.cur{color:#fff;background:url("../images/z_nav_cur.png")/*tpa=http://www.nbjy.org.cn/Content/images/z_nav_cur.png*/ no-repeat left center; display:inline-block;}
+
+.subNav{ position:absolute;top:20px;left:170px;width:400px;font-size:14px;color:#000;font-weight:normal;}
+.subNav a{color:#000;float:left; width:29%;background:url("../images/z_first_ico.png")/*tpa=http://www.nbjy.org.cn/Content/images/z_first_ico.png*/ no-repeat left center; padding-left:4%;line-height:40px;}

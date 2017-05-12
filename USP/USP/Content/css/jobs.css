@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+/*招聘主页*/
+
+.jobs{margin:10px 0.5%; width:99%;}
+
+.jobsA,.jobsB,.jobsC,.content{ width:100%;overflow:hidden;}
+
+#JINGDONGBox{position:relative;}
+#JINGDONGNumID{ position:absolute; bottom:8px; right:8px; z-index:33px;}
+#JINGDONGNumID li{list-style:none;float:left;width:12px;height:12px; line-height:12px;FILTER:alpha(opacity=80);opacity:0.8;border:1px solid #ddd;background-color:#FFFFFF;color:#3a9ce8;text-align:center;cursor:pointer;margin-right:4px;padding-top:2px;overflow:hidden;}
+#JINGDONGNumID li:hover,#JINGDONGNumID li.active{border:1px solid #3a9ce8;background-color:#3a9ce8;color:#FFFFFF;width:12px;height:12px;font-weight:bold;font-size:13px;}
+#JINGDONGContentID li{position:relative;}
+.mask{FILTER:alpha(opacity=60);opacity:0.6;width:100%;height:35px;background-color:#000000;position:absolute;bottom:0;left:0;display:block;z-index:6px;}
+.comt{width:320px;height:20px;position:absolute;left:0;bottom:5px;font-size:12px;color:#ffffff;font-weight:bold;text-indent:10px;text-align:left;z-index:7px;}
+
+.search{ background:#fefbdf;}
+.search h3{ width:15px; background:#d20202; color:#FFFFFF; float:left; padding:10px; height:63px;}
+.search .search_box{ width:920px; float:right;padding:0px 5px;}
+.search .hot_ser_word a{padding:0px 5px; color:#9b8f8f;}
+.search select,.search input{ height:28px;}
+.search .in_sub{padding:0px 30px; font-size:14px;}
+
+
+.zp_list{ padding:10px 10px; overflow:hidden;}
+.zp_list dl{ width:25%; float:left; padding:5px 0px; line-height:20px; font-size:12px;height:40px; overflow:hidden}
+.zp_list dd{padding-left:12px;background:url("../images/arrow2.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow2.gif*/ no-repeat 5px; font-weight:600;height:20px; width:216px; overflow:hidden}
+.zp_list dt{padding-left:12px; color:#999}
+.zp_list dl a{ color:#000}
+.zp_list dl a:hover{ color:#f60;}
+
+.login_tab {
+width: 100%; height:176px;
+position: relative;
+padding-bottom: 15px;
+border-top: 3px #d20202 solid;background: url("../images/red_tt.gif")/*tpa=http://www.nbjy.org.cn/Content/images/red_tt.gif*/ repeat-x bottom;
+margin-top: 15px; overflow:hidden;
+}
+.Tag_news2{ padding:10px 0px}
+.Tag_news2 li{ line-height:28px; padding-left:22px;background:url("../images/arrow.gif")/*tpa=http://www.nbjy.org.cn/Content/images/arrow.gif*/ no-repeat 13px;}
+
+
+/*找工作 标题*/
+.yun_Looking_work_all{width:100%; float:left;}
+.yun_Looking_work_all ul{ float:right; width:30%;}
+.yun_Looking_work_all h3{ float:left; width:30%;height:39px; line-height:39px; padding-left:1%; color:#d20202;}
+.yun_Looking_work_all_sort{width:988px;height:39px; float:left;border:1px solid #f4dcc1;background: url("../images/red_tt.gif")/*tpa=http://www.nbjy.org.cn/Content/images/red_tt.gif*/ repeat-x bottom;border-top:2px solid #d20202; overflow:hidden;}
+.view_sort_list{ float:left;}
+.view_sort_list li{width:77px; text-align:center;height:39px; line-height:39px; float:left;border-right:1px solid #ebebeb; background:url("../images/yun_com_icon.png")/*tpa=http://www.nbjy.org.cn/Content/images/yun_com_icon.png*/ no-repeat 70px center; padding-right:10px; float:right;}
+/*找工作 left*/
+.yun_Looking_work_left{width:980px; float:left; background:#fff; margin-top:10px; margin-bottom:10px; padding-bottom:10px; overflow:hidden;}
+.All_post_title {width: 100%;height:45px;border-bottom:1px solid #e6e6e6;}
+.All_post_title1 li {float: left;height:45px;line-height:45px;text-align: center;color:#333; font-weight:600;}
+.User_post_cot_bg {background: #eee;}
+.All_post_title .yun_td6 {border-right: none;}
+.All_post_title  .yun_td1 {width: 280px; text-align:left; text-indent:20px;}
+.yun_td2 {width: 146px;}
+.yun_td7 {width: 100px;}
+.yun_td3 {width: 146px;}
+.yun_td4 {width: 106px;}
+.yun_td5 {width: 106px;}
+.yun_td6 {width: 230px; }
+.fb{font-weight:600; background:#FAFAFA;}
+.yun_Looking_work_name{ border-bottom: 1px dashed #e7e7e7; cursor: pointer;width: 100%; padding-top:15px; padding-bottom:10px; float:left}
+.yun_Looking_work_yun_td1{width:280px; float:left;font-weight:bold}
+.yun_Looking_work_yun_td2{width:146px; float:left; text-align:center;color:#676767; }
+.yun_Looking_work_yun_td3{width:146px; float:left; text-align:center;color:#f60;font-family:微软雅黑; font-size:14px;}
+.yun_Looking_work_yun_td4{width:106px; float:left; text-align:center; }
+.yun_Looking_work_yun_td5{width:106px; float:left; text-align:center; color:#999;}
+.yun_Looking_work_yun_td6{width:230px; float:left; text-align:left; color:#999;}
+.yun_Looking_work_yun_td7{width:100px; float:left; text-align:left; color:#999;}
+.yun_Looking_work_yun_td6 a{color:#40941f}
+.yun_Looking_work_yun_top{ float:left; margin-bottom:10px;}
+.yun_Looking_work_yun_post{	color: #315AAA;display: block;float: left;font-size: 14px;color:#3d84b8; }
+.yun_Looking_work_yun_top img{ margin-left:5px; float:left; }
+.search_5t_a_chk {display: block;float: left;height: 12px;margin-left: 5px;margin-right: 3px;margin-top: 3px;overflow: hidden;width: 12px;}
+.yun_Looking_work_yun_gs{color:#999; display:block; margin-left:20px;}
+.yun_Looking_work_cz{ width:195px;position:absolute;right:0px;top:0px;}
+.Com_yun_bth{color:#fff; display:block;height:26px;line-height:26px;  width:82px; text-align:center; margin-left:10px; background:url("../images/an_01.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/an_01.jpg*/ no-repeat;float:left}
+.All_post_seach_l {width: 100%;border-bottom: 1px dashed #e7e7e7; cursor: pointer;padding-top:15px; padding-bottom:10px; }
+.yun_Looking_work_x{width:1004px; float:left; position:relative; line-height:20px; z-index:10}
+.yun_Looking_work_x span{ display:inline-block; margin-left:30px;color:#676767}
+.yun_Looking_work_x em{color:#aeaeae}
+.yun_Looking_work_rz{width:1000px; padding-left:30px;height:20px; line-height:20px;color:#676767; float:left; overflow:hidden;   text-overflow: ellipsis;}
+.yun_Looking_work_cz{ display:block}
+.Com_yun_bth{color:#fff;width:83px;height:27px; text-align:center; line-height:27px;background:url("../images/an_01.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/an_01.jpg*/ no-repeat; float:left; margin-right:10px;}
+.Com_yun_bth2{color:#c18903; line-height:27px; text-decoration:underline; padding:0px 8px;}
+.Com_yun_bth:hover{ color:#fff; text-decoration:none}
+.yun_Looking_work_rz{width:710px;height:auto; overflow:auto;white-space: normal; word-break: break-all;}
+
+/*找工作 right*/
+.yun_Looking_work_right{width:197px; float:right; margin-top:10px; }
+.yun_Looking_work_right_box{width:195px;border:1px solid #f0ebeb;background:#fff}
+.yun_Looking_work_h1{width:100%;height:34px; line-height:34px; font-weight:bold;color:#8b8282; font-size:14px; text-indent:10px; background:#fafafa;}
+.yun_Looking_work_right_box ul{ padding-left:10px; padding-right:10px;}
+.yun_Looking_work_right_box ul li{width:100%;border-bottom:1px solid #f1f1f1;  line-height:20px;padding-top:10px; padding-bottom:10px;}
+.yun_Looking_work_right_box ul li .yun_Looking_work_post_name{ font-size:14px; display:block;color:#0286ce}
+.yun_Looking_work_right_box ul li span{ display:block;color:#7d7d7e}
+.yun_Looking_work_right_box ul li em{ color:#d34501; font-family:微软雅黑;}
+.yun_Looking_work_right_box ul li  a{color:#999;}
+.cont_fd1 {display: inline-block;position: absolute;width: 516px; z-index: 1000;}
+.cont_fd_bg1 { background:#FFFFFF;border: 2px solid #1E9EDB;display: block; float: left;position: relative; width: 512px;}
+.yun_post_content {float: left; padding: 16px 0;width: 512px;}
+.cont_fd_bg1 .cont_p1 {padding: 0 20px 20px;}
+.cont_fd_bg1 .cont_p1 .li1 {background: url("../../images/jobs/yun_icodd.jpg")/*tpa=http://www.nbjy.org.cn/images/jobs/yun_icodd.jpg*/ repeat-x scroll center bottom transparent;line-height: 26px;text-align: left;}
+.cont_fd_bg1 .cont_p1 .li_name1 {background: none repeat scroll 0 0 transparent;color: #595959;font-size: 14px;font-weight: bold;height: 40px;line-height: 40px;text-align: left;}
+.cont_fd_bg1 .cont_p1 .li_name1 span {float: left}
+.yun_post_lt {width: 8px;height: 8px;position: absolute;top: -2px;left: -2px;background-position: 0 -234px;overflow: hidden;display: block}
+.yun_post_lb {width: 8px;height: 8px;position: absolute;bottom: -2px;left: -2px;background-position: 0 -258px;overflow: hidden;display: block}
+.yun_post_rt {width: 8px;height: 8px;position: absolute;top: -2px;right: -2px;background-position: 0 -246px;overflow: hidden;display: block}
+.yun_post_rb {width: 8px;height: 8px;position: absolute;bottom: -2px;right: -2px;background-position: 0 -269px;overflow: hidden;display: block}
+.tc_san1 {background-position: 0 -209px;height: 20px;left: -12px;position: absolute;top: 15px;width: 12px;}
+.SpFormLBut {background: url("../../images/jobs/yun_icobg1.png")/*tpa=http://www.nbjy.org.cn/images/jobs/yun_icobg1.png*/ no-repeat scroll 0 -140px transparent;border: medium none;color: #A9A9A9;cursor: pointer;display: block;float: left;height: 22px;line-height: 22px;margin-left: 8px;margin-top: 5px;text-align: left;text-indent: 5px;width: 260px;}
+.All_post_list {background:#FAFAFA;border-bottom: 1px solid #E1E1E1;height: 40px; line-height: 40px; width: 100%;}
+.All_post_list .sq_post { background-position: 0 -302px; border: 1px solid #A6B7C9; display: inline-block;float: left; height: 20px;line-height: 20px;margin: 10px 8px 0; padding: 0 5px;}
+.checkbox_all{ float:left;color:#5a5656}
+.checkbox_job{width:13px;hight:13px; float:left; margin-top:3px; margin-left:10px; margin-right:8px;}
+.checkbox_job i {cursor: pointer;display: inline;float: left;height: 12px;overflow: hidden;width: 12px; margin-top:6px; display:inline;}
+.checkbox_job i input{height: 12px;overflow: hidden;width: 12px; border:1px #ccc solid; padding:0px; margin:0px;}
+/*找工作end*/
+
+/*找人才 left*/
+.All_post_seach_user{ padding-top:0px; padding-bottom:0px;}
+.Com_Search_Results {width:100%;height: 20px;padding-top: 10px;padding-bottom: 10px;border-bottom: 1px solid #e0e0e0;}
+.Com_Search_Results span {display: inline-block;float: left;width: 150px;padding-left: 10px;font-family: 微软雅黑;font-size: 16px;}
+ .user_title{ display:block; margin-right:10px;}
+.Com_Search_Results_r {width: 380px}
+.Com_Search_Results_r ul {;float: left}
+.Com_Search_Results_r ul li {float: left;background: url("../../images/jobs/ico_range.gif")/*tpa=http://www.nbjy.org.cn/images/jobs/ico_range.gif*/ no-repeat left center;padding-left: 13px;margin-right: 10px;margin-top: 5px;height:20px;line-height:20px;color: #999999;}
+.Com_Search_Results_r ul .All_post_h1_act {background: url("../../images/jobs/yun_icon_sub.png")/*tpa=http://www.nbjy.org.cn/images/jobs/yun_icon_sub.png*/ no-repeat 0 -191px;}
+.Com_Search_Results_r ul .All_post_h1_act a{color:#f60}
+.Com_text {border: 1px solid #B5B5B5;height: 20px;line-height: 20px;float:left;;margin-right:5px;padding:0}
+.Com_submit {width: 34px;height: 22px;background: url("../../images/jobs/yun_Com_icon2.png")/*tpa=http://www.nbjy.org.cn/images/jobs/yun_Com_icon2.png*/ no-repeat -407px -57px;border: none;float:left;padding:0}
+/*找人才 right*/
+.com_left_sidebar {width: 197px;border-bottom: 1px solid #d8dce3}
+.All_post_title {  border-bottom: 1px solid #E6E6E6; height: 45px;width:100%;}
+.All_post_title li { color: #666;float: left; height: 45px; line-height: 45px;text-align: center;}
+.All_post_title  .yun_td1_user {width: 100px; text-align:left; padding-left:20px;}
+.All_post_title .yun_td1_user i{ padding-left:8px;}
+.yun_td1_user {width: 120px; text-align:left; }
+.yun_td2_user {width: 175px;}
+.All_post_title .yun_td2_user { text-align: left; width: 195px;}
+.All_post_seach_l .yun_td2_user { text-align: left; width: 195px;}
+.yun_td3_user {width: 90px;}
+.yun_td4_user { width: 90px;}
+.yun_td5_user {width: 50px;}
+.yun_td6_user { width: 70px;}
+.yun_td7_user {width: 90px;}
+.yun_td8_user { width: 120px;}
+.yun_td9_user { width: 85px;}
+.All_post_title .yun_td9_user {border-right: medium none;}
+.yun_td1_user .search_5t_a_user {color: #006FDD; float: left;font-size: 14px;  padding-left: 5px;}
+.User_left_list {float: left;margin-bottom: 10px;padding: 5px;width: 185px;}
+.User_left_list dt {background:#FFFFFF;border: 1px solid #CCCCCC;float: left; padding: 2px;width: 80px;}
+.User_left_list dd {color: #777777; float: left;line-height: 18px;padding-left: 5px; width: 88px;}
+.seach_user_name {color: #006FDD; display: block;width: 92px;}
+.User_left_list dd span {white-space: nowrap;}

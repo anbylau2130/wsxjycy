@@ -1,0 +1,246 @@
+﻿<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>尉氏县就业创业网 - 首页</title>
+    <link href="/Content/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/js/layer/skin/default/layer.css"  rel="stylesheet" />
+    <script src="~/Static/Js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="/Content/js/tabTag.js"></script>
+    <script src="~/Content/js/layer/layer.js" ></script>
+    <script src="/Content/js/MSClass.js" charset="gb2312"></script>
+    <script src="~/Content/js/mylayer.js"></script>
+    @*<script src="~/Content/js/mylayer.js" charset="gb2312"></script>*@
+    <!--[if lte ie 6]>
+    <script src="js/iepng.js" type="text/javascript"></script>
+    <script type="text/javascript">
+       EvPNG.fix('div,ul,img,li,input,a,img,p,span');
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+    var t;var l;
+    $(function(){
+            //var urls = window.location.href;
+            //$.post('/web/default/FrontViewLog', { url: urls }, function (rs) { });
+
+            $(".headNav li").mouseleave(function () {
+                $(this).find("div").hide(300);
+                clearTimeout(t);
+            });
+            $(".headNav li").mouseenter(function () {
+                l=$(this);
+                t=setTimeout("enterShow()", 100)
+            });
+
+
+             formatDate();
+            function formatDate(){
+                var obj;
+                var newDate = new Date();
+                var year,month,date,hours,minutes,seconds,day,time;
+                var arrtDay = ['星期一','星期二','星期三','星期四','星期五','星期六','星期日',];
+                year = newDate.getFullYear() + '年';
+                month = newDate.getMonth() + 1 + '月';
+                date = newDate.getDate() + '日';
+                hours = newDate.getHours();
+                minutes = newDate.getMinutes();
+                seconds = newDate.getSeconds();
+                hours = formatTime(hours);
+                minutes = formatTime(minutes);
+                seconds = formatTime(seconds);
+                day = arrtDay[newDate.getDay() - 1];
+                time = year + month + date + ' ' + day;
+                obj = document.getElementById('showTime');
+                obj.innerHTML = time;
+                function formatTime(time){
+                    if(time < 10){
+                        return time = '0' + time;
+                    }
+                    return time;
+                }
+                    //setInterval(formatDate,1000);
+            };
+    });
+    function enterShow(){
+         l.find("div").show(300);
+    }
+    function onlinkopen(urls){
+         window.open(urls);
+    }
+    </script>
+</head>
+
+<body>
+    <div id="wcagnav1" style="display: none; height: 27px;"></div>
+    <div class="warp" id="container">
+        <div class="header">
+            <div class="top">
+                <div id='showTime' style='position:absolute;top:135px;left:173px;color:black;padding-left: 17px;'></div>
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1004" height="195">
+                    <param name="movie" value="/content/images/top.swf">
+                    <param name="quality" value="high">
+                    <param name="wmode" value="transparent">
+                    <embed src="/content/images/top.swf" width="1004" height="195" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed>
+                </object>
+                <div class="topNav">
+                    <span class="fl pl10" id="hyy">您好！ 欢迎来到尉氏县就业创业网 </span>
+                </div>
+                <div class="logo"><a href="" target="_blank"><img src="/content/images/logo.png" border="0"></a></div>
+                <div class="nb_logo"><a href="" target="_blank"><img src="" border="0"></a></div>
+
+            </div>
+        </div>
+        <div class="wrapNav">
+            <div class="headNav">
+                <ul>
+                    <li style="margin-left:50px"><a id="dd" href='\Default\Index'>首页</a></li>
+                    <li>
+                        <a href="/Default/Organizations">机构信息</a>
+                        <div class="subNav">
+                            <span><a href="/cn/xwzx.html">机构简介</a></span>
+                            <span><a href="/cn/tzgg.html">通知公告</a></span>
+                            <span><a href="/cn/tzgg.html">最新资讯</a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/Default/OpenGovernment">办事指南</a>
+                        <div class="subNav">
+                            <span><a href="/cn/xwzx.html">办理就业创业证</a></span>
+                            <span><a href="/cn/tzgg.html">公益性岗位补贴</a></span>
+                            <span><a href="/cn/tzgg.html">社会保险补贴</a></span>
+                            <span><a href="/cn/tzgg.html">大学生开业补贴</a></span>
+                            <span><a href="/cn/tzgg.html">就业援助补贴认证</a></span>
+                            <span><a href="/cn/tzgg.html">就业创业证审验</a></span>
+                        </div>
+                      
+                    </li>
+
+                    <li>
+                        <a style="cursor:default;">办事大厅</a>
+                        <div class="subNav">
+                            <span><a href="/cn/xwzx.html">求职信息</a></span>
+                            <span><a href="/cn/tzgg.html">招聘信息</a></span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="/Default/Regulations">政策法规</a>
+                    </li>
+                    <li>
+                        <a href="/Default/TableDownLoad">表格下载</a>
+                    </li>
+                    <li>
+                        <a href="/Default/Communication">互动交流</a>
+                        <div class="subNav">
+                            <span><a href="/cn/xwzx.html">局长信箱</a></span>
+                            <span><a href="/cn/tzgg.html">建议处理查询</a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--<div class="clear1"></div>
+                    <div class="navbar">
+
+                    <div class="fl weather" style="width:400px;"><strong style=" width:70px; float:left;">天气预报：</strong><div style="width:310px; height:25px;  padding-top:3px;overflow:hidden; float:left;">
+
+                            <iframe id='watchpnl' style='display:none;' width="310" scrolling="no" height="25" frameborder="0" allowtransparency="true" src="#"></iframe>
+                    </div>
+                              <script type='text/javascript'>
+                                    $(function(){
+                                            setTimeout(function(){
+                                                 $('#watchpnl').attr('src', "http://i.tianqi.com/index.php?c=code&id=40&icon=1&num=3").show();
+                                            },100);
+                                    });
+                            </script>
+                            </div>
+                            <div class="fr time" style=" width:195px;">
+                                    2017年04月05日 星期三
+                            </div>
+                    </div>
+            </div>-->
+           
+            <style type="text/css">
+                .js_layer_back {
+                    width: 100%;
+                    height: 100%;
+                    position: fixed;
+                    _position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #000;
+                    _background: none;
+                    z-index: 20001;
+                    *background: none;
+                    filter: alpha(opacity:40);
+                    -khtml-opacity: 0.4;
+                    opacity: 0.4;
+                    -moz-opacity: 0.4;
+                    display: none;
+                    _background-color: none;
+                }
+
+                .js_layer {
+                    width: 100%;
+                    position: fixed;
+                    _position: absolute;
+                    z-index: 20002;
+                    text-align: center;
+                    top: 50%;
+                    margin-top: -222px;
+                    left: 50%;
+                    margin-left: -50%;
+                    display: none;
+                }
+
+                .js_layer_box {
+                    width: 1004px;
+                    margin: auto;
+                    position: relative;
+                }
+
+                .js_layer_close {
+                    z-index: 999;
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+                    cursor: pointer;
+                    width: 29px;
+                    height: 29px;
+                }
+
+                .floatleft {
+                    float: left;
+                }
+
+                .clearfix:after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+
+                .clearfix {
+                    zoom: 1;
+                }
+            </style>
+
+            <div class="container main">
+
+
+                @RenderBody()
+
+                <div id="box_foot">
+                    <div class="Copyright">
+                        版权所有:尉氏县就业管理服务局 豫ICP备08015452号  <br>
+                       @* <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254953850'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1254953850' type='text/javascript'%3E%3C/script%3E"));</script>*@
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+</body>
+</html>

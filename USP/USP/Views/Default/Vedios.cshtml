@@ -1,0 +1,370 @@
+﻿
+@{
+    ViewBag.Title = "Vedios";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+
+
+
+<link href="/Content/css/ny.css" rel="stylesheet" type="text/css" />
+<style>
+    /*视频*/
+    #video_bg {
+        width: 100%;
+        height: 480px;
+        margin-top: 18px;
+        background: #a80505;
+        margin-bottom: 10px;
+    }
+
+    .video_kk {
+        width: 955px;
+        margin: 0px auto;
+    }
+
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    *html .clearfix {
+        height: 1%;
+    }
+
+    * + html .clearfix {
+        height: 1%;
+    }
+
+    .ff_s {
+        font-family: 宋体;
+        font-size: 10px;
+    }
+
+    .clearfix {
+        display: inline-block;
+    }
+
+    .clearfix {
+        display: block;
+    }
+
+    #a1 {
+        width: 600px;
+        height: 480px;
+        float: left;
+    }
+
+    #a2, #a3 {
+        width: 25px;
+        height: 480px;
+        float: left;
+        color: #FFF;
+        background-color: #4c0202;
+        line-height: 480px;
+        cursor: pointer;
+    }
+
+    #playerlist {
+        width: 330px;
+        height: 480px;
+        overflow: auto;
+        float: left;
+        background: #7f0303;
+        font-size: 14px;
+        color: #fff;
+        font-family: "宋体";
+    }
+
+        #playerlist a {
+            text-decoration: none;
+            outline: none;
+            color: #FFF;
+        }
+
+        #playerlist li {
+            width: 300px;
+            list-style: none;
+            height: 58px;
+            background: #7f0303;
+            border-top: solid 1px #a60a0a;
+            border-bottom: solid 1px #4c0202;
+            line-height: 24px;
+            margin: 0px 5px;
+            padding: 10px 0px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+            #playerlist li:last-child {
+                border-bottom: none;
+            }
+
+            #playerlist li.crent {
+                background: #7f0303;
+            }
+
+                #playerlist li.crent a {
+                    color: #fff;
+                }
+
+            #playerlist li a {
+                display: block;
+                color: #fff;
+            }
+
+            #playerlist li img {
+                vertical-align: middle;
+                height: 50px;
+                width: 65px;
+                margin: 0 15px 0 0;
+                float: left;
+                padding-left: 5px;
+            }
+</style>
+
+<div class="container main">
+    <div class="detail">
+        <div class="crumbs">当前位置：首页>>视频列表</div>
+        <div class="news_detail" style="margin:0 auto;">
+            <div id="video_bg">
+                <div class="video_kk">
+                    <div class="clearfix">
+                        <div id="a1"></div>
+                        <div id="a2" onclick="Close();" title="收起列表">
+                            <div class="ff_s" align="center">&gt;&gt;</div>
+                        </div>
+                        <div id="a3" onclick="Open();" style="display:none" title="展开列表">
+                            <div class="ff_s" align="center">&lt;&lt;</div>
+                        </div>
+                        <ul id="playerlist">
+                            <li class="vli" onclick="playvideo(77)"><img src="/content/images/viod.png">20170204就业创业在宁波：年后招聘旺市到来了-宁波广电网</li>
+                            <li class="vli" onclick="playvideo(76)"><img src="/content/images/viod.png">20170121宁波电视台 看看看 就业创业在宁波：社保“一体机” 乡镇街道都有了！-宁波广电网</li>
+                            <li class="vli" onclick="playvideo(75)"><img src="/content/images/viod.png">20170114宁波电视台一套看看看 就业创业在宁波：小项目圆残疾人创业大梦想-宁波广电网</li>
+                            <li class="vli" onclick="playvideo(74)"><img src="/content/images/viod.png">20170107宁波电视台一套看看看 就业创业在宁波：“孵化+投资”打造宁波“双创”样板园区-宁波广电网</li>
+                            <li class="vli" onclick="playvideo(73)"><img src="/content/images/viod.png">20161231就业创业在宁波：鄞州“大创园”获评为全国创业孵化示范基地-宁波广电网</li>
+                            <li class="vli" onclick="playvideo(72)"><img src="/content/images/viod.png">20161224宁波电视台《看看看》就业创业在宁波：中国大学生岗位创业联盟首次落地宁波-宁波广电网</li>
+                            <li class="vli" onclick="playvideo(71)"><img src="/content/images/viod.png">20161217宁波电视台一套看看看 就业创业在宁波：咖啡相伴创业梦-宁波广电网</li>
+                            <li class="vli" onclick="playvideo(70)"><img src="/content/images/viod.png">20161212宁波电视台一套看看看 监狱举行“就业创业推介会” 为服刑人员回归社会做准备-宁波广电网”</li>
+                            <li class="vli" onclick="playvideo(69)"><img src="/content/images/viod.png">20161210宁波电视台一套看看看播出 就业创业在宁波：毕业生开公司 创业实现价值-宁波广电网”</li>
+                            <li class="vli" onclick="playvideo(68)"><img src="/content/images/viod.png">20161203 就业创业在宁波：有备而来的毕业生 招聘企业很青睐-宁波广电网”</li>
+                            <li class="vli" onclick="playvideo(67)"><img src="/content/images/viod.png">20161126就业创业在宁波：“好简历”怎么来 简历大赛告诉你-宁波广电网”</li>
+                            <li class="vli" onclick="playvideo(66)"><img src="/content/images/viod.png">就业创业在宁波：农村电商 温暖同行”</li>
+                            <li class="vli" onclick="playvideo(65)"><img src="/content/images/viod.png">20161119就业创业在宁波：象山助推农村电商创业势头好”</li>
+                            <li class="vli" onclick="playvideo(64)"><img src="/content/images/viod.png">20161112就业创业在宁波：从旧校区到“集盒”创业园”</li>
+                            <li class="vli" onclick="playvideo(63)"><img src="/content/images/viod.png">20161105就业创业在宁波：首个“PPP”创业园区开建 创业者有了新“归宿”</li>
+                            <li class="vli" onclick="playvideo(62)"><img src="/content/images/viod.png">20161029就业创业在宁波：手机看胎儿 智能超声记录“第一次微笑”</li>
+                            <li class="vli" onclick="playvideo(61)"><img src="/content/images/viod.png">20161022就业创业在宁波：福城社区创业“微”超市为居民就业添助力</li>
+                            <li class="vli" onclick="playvideo(60)"><img src="/content/images/viod.png">20161015就业创业在宁波：无线充电 前景看好</li>
+                            <li class="vli" onclick="playvideo(59)"><img src="/content/images/viod.png">20161008就业创业在宁波：慈溪创业小额贷款发放过亿 惠及千人创业者</li>
+                            <li class="vli" onclick="playvideo(58)"><img src="/content/images/viod.png">20160928就业创业在宁波：“大创赛”全国总决赛启幕 精英集聚宁波</li>
+                            <li class="vli" onclick="playvideo(57)"><img src="/content/images/viod.png">20160924 就业创业在宁波：大创赛决战在即</li>
+                            <li class="vli" onclick="playvideo(56)"><img src="/content/images/viod.png">20160917就业创业在宁波：“服务之星”让政策宣传动起来</li>
+                            <li class="vli" onclick="playvideo(55)"><img src="/content/images/viod.png">20160910就业创业在宁波：民营资本打造“甬漂之家”</li>
+                            <li class="vli" onclick="playvideo(54)"><img src="/content/images/viod.png">20160903就业创业在宁波：实践基地为大学生就业找“捷径”</li>
+
+
+                            <li class="vli" onclick="playvideo(53)"><img src="/content/images/viod.png">20160827 就业创业在宁波：开网店认定成功可享受社保补贴领</li>
+                            <li class="vli" onclick="playvideo(52)"><img src="/content/images/viod.png">20160820 就业创业在宁波：企业不裁员或少裁员可领取稳岗“红包”</li>
+                            <li class="vli" onclick="playvideo(51)"><img src="/content/images/viod.png">20160813 就业创业在宁波：集聚资源打通创业生态链</li>
+                            <li class="vli" onclick="playvideo(50)"><img src="/content/images/viod.png">20160806就业创业在宁波：“大创赛”浙江赛区落幕</li>
+                            <li class="vli" onclick="playvideo(49)"><img src="/content/images/viod.png">20160730就业创业在宁波：导师助力“大创赛”项目更具商业潜质</li>
+                            <li class="vli" onclick="playvideo(48)"><img src="/content/images/viod.png">20160723就业创业在宁波：“大创赛”宁海赛区落幕 金奖收获15万</li>
+                            <li class="vli" onclick="playvideo(47)"><img src="/content/images/viod.png">20160716就业创业在宁波：张坚东——内心超越“身残”</li>
+                            <li class="vli" onclick="playvideo(46)"><img src="/content/images/viod.png">20160716就业创业在宁波：“助残帮扶”专场创业集市开市</li>
+
+                            <li class="vli" onclick="playvideo(44)"><img src="/content/images/viod.png">20160709 就业创业在宁波：夏挺——“咬合相扣”走得顺</li>
+                            <li class="vli" onclick="playvideo(45)"><img src="/content/images/viod.png">20160702 就业创业在宁波：徐毅——脑子活有毅力 创业路稳当当</li>
+                            <li class="vli" onclick="playvideo(0)"><img src="/content/images/viod.png">20160625就业创业在宁波：新媒体盛会邀你来“创”</li>
+                            <li class="vli" onclick="playvideo(1)"><img src="/content/images/viod.png">20160618就业创业在宁波：“大创赛”华东赛区获创业融资2700多万</li>
+                            <li class="vli" onclick="playvideo(2)"><img src="/content/images/viod.png">20160611就业创业在宁波：沈锋——“理工男”的节能环保梦</li>
+                            <li class="vli" onclick="playvideo(3)"><img src="/content/images/viod.png">20160604就业创业在宁波：戴志刚——解甲归田从深圳到深甽+小山</li>
+                            <li class="vli" onclick="playvideo(4)"><img src="/content/images/viod.png">就业创业在宁波：“二次创业”让企业实现转型升级</li>
+                            <li class="vli" onclick="playvideo(5)"><img src="/content/images/viod.png">就业创业在宁波：2016“大创赛”即将启动 参赛者月底可报名</li>
+                            <li class="vli" onclick="playvideo(6)"><img src="/content/images/viod.png">就业创业在宁波：摆脱“锄头+鼠标” 农村电商设摊求合作</li>
+                            <li class="vli" onclick="playvideo(7)"><img src="/content/images/viod.png">就业创业在宁波：大创园服务升级 节省“隐性成本”</li>
+                            <li class="vli" onclick="playvideo(8)"><img src="/content/images/viod.png">就业创业在宁波：大创园为创业者“铺路搭桥”</li>
+                            <li class="vli" onclick="playvideo(9)"><img src="/content/images/viod.png">就业创业在宁波：何金挺——以“工匠精神”专注智能家居产品</li>
+                            <li class="vli" onclick="playvideo(10)"><img src="/content/images/viod.png">就业创业在宁波：节后用工 稳中有增</li>
+                            <li class="vli" onclick="playvideo(11)"><img src="/content/images/viod.png">就业创业在宁波：老政策新变化 创业者受实惠</li>
+                            <li class="vli" onclick="playvideo(12)"><img src="/content/images/viod.png">就业创业在宁波：理想照进现实 首届“成长之星”揭晓</li>
+                            <li class="vli" onclick="playvideo(13)"><img src="/content/images/viod.png">就业创业在宁波：刘诗诗——脚踏实地走出创业“三步曲”</li>
+                            <li class="vli" onclick="playvideo(14)"><img src="/content/images/viod.png">就业创业在宁波：面试大赛“直面”岗位</li>
+                            <li class="vli" onclick="playvideo(15)"><img src="/content/images/viod.png">就业创业在宁波：宁波打造“巾帼电商”</li>
+                            <li class="vli" onclick="playvideo(16)"><img src="/content/images/viod.png">就业创业在宁波：企业招人看实力 求职者肯学是首步</li>
+                            <li class="vli" onclick="playvideo(17)"><img src="/content/images/viod.png">就业创业在宁波：社会力量共建“创业孵化平台”</li>
+                            <li class="vli" onclick="playvideo(18)"><img src="/content/images/viod.png">就业创业在宁波：王杰军——创业把握市场“冷门”</li>
+                            <li class="vli" onclick="playvideo(19)"><img src="/content/images/viod.png">就业创业在宁波：朱冕轩——职场打磨让人生更“饱满”</li>
+
+                            <li class="vli" onclick="playvideo(20)"><img src="/content/images/viod.png">就业创业在宁波：2014创业新秀评选揭晓</li>
+                            <li class="vli" onclick="playvideo(21)"><img src="/content/images/viod.png">就业创业在宁波：创业大赛吆喝进武汉</li>
+                            <li class="vli" onclick="playvideo(22)"><img src="/content/images/viod.png">就业创业在宁波：创业大赛浙大巡讲</li>
+                            <li class="vli" onclick="playvideo(23)"><img src="/content/images/viod.png">就业创业在宁波：创业集市上的“科幻梦”</li>
+                            <li class="vli" onclick="playvideo(24)"><img src="/content/images/viod.png">就业创业在宁波：创业集市助力创客实现梦想</li>
+                            <li class="vli" onclick="playvideo(25)"><img src="/content/images/viod.png">就业创业在宁波：打造具有活力的创业之城</li>
+                            <li class="vli" onclick="playvideo(26)"><img src="/content/images/viod.png">就业创业在宁波：大学生创业新秀开始网投</li>
+                            <li class="vli" onclick="playvideo(27)"><img src="/content/images/viod.png">就业创业在宁波：大学生创业有了孵化器</li>
+                            <li class="vli" onclick="playvideo(28)"><img src="/content/images/viod.png">就业创业在宁波：大学生创业园做好大学生的创业保姆</li>
+                            <li class="vli" onclick="playvideo(29)"><img src="/content/images/viod.png">就业创业在宁波：大学未毕业公司市值已上亿</li>
+                            <li class="vli" onclick="playvideo(30)"><img src="/content/images/viod.png">就业创业在宁波：奉化打响浙东农村淘宝第一枪</li>
+                            <li class="vli" onclick="playvideo(31)"><img src="/content/images/viod.png">就业创业在宁波：供需方提前配对招聘会现场签约</li>
+                            <li class="vli" onclick="playvideo(32)"><img src="/content/images/viod.png">就业创业在宁波：节后首周人才供需两旺</li>
+                            <li class="vli" onclick="playvideo(33)"><img src="/content/images/viod.png">就业创业在宁波：罗培娟的网络生意经</li>
+                            <li class="vli" onclick="playvideo(34)"><img src="/content/images/viod.png">就业创业在宁波：漫漫创业路有苦也是甜</li>
+                            <li class="vli" onclick="playvideo(35)"><img src="/content/images/viod.png">就业创业在宁波：苗圊区让大学生零成本创业</li>
+                            <li class="vli" onclick="playvideo(36)"><img src="/content/images/viod.png">就业创业在宁波：宁海举办首届电子商务创业大赛</li>
+                            <li class="vli" onclick="playvideo(37)"><img src="/content/images/viod.png">就业创业在宁波：企业家走进高校分享创业心得</li>
+                            <li class="vli" onclick="playvideo(38)"><img src="/content/images/viod.png">就业创业在宁波：失业保险保障生活促就业</li>
+                            <li class="vli" onclick="playvideo(39)"><img src="/content/images/viod.png">就业创业在宁波：县域经济创业天地广</li>
+                            <li class="vli" onclick="playvideo(40)"><img src="/content/images/viod.png">就业创业在宁波：政策约包助中小微企业招留人才</li>
+                            <li class="vli" onclick="playvideo(41)"><img src="/content/images/viod.png">就业创业在宁波：中国创翼大赛即将打响</li>
+                            <li class="vli" onclick="playvideo(42)"><img src="/content/images/viod.png">就业创业在宁波：中国创翼大赛浙江赛区收官</li>
+                            <li class="vli" onclick="playvideo(43)"><img src="/content/images/viod.png">就业创业在宁波：周一见--创业者的沙龙</li>
+
+                        </ul>
+                    </div>
+
+                    <script type="text/javascript" src="/content/js/ckplayerbar/ckplayer.js"></script>
+                    <script type="text/javascript">
+    function loadedHandler() {
+        if (CKobject.getObjectById('ckplayer_a1').getType()) {
+            CKobject.getObjectById('ckplayer_a1').videoPlay();
+        }
+        else {
+            CKobject.getObjectById('ckplayer_a1').videoPlay();
+        }
+    }
+    function playerstop() {
+        setTimeend();
+    }
+    function setTimeend() {//获取下一部视频的播放ID
+        nowD++;
+        if (nowD >= videoarr.length) {
+            nowD = 0;
+        }
+        playvideo(nowD);
+    }
+    function Close() {//关闭播放列表
+        CKobject._K_('a2').style.display = 'none';
+        CKobject._K_('playerlist').style.display = 'none';
+        CKobject._K_('a3').style.display = 'block';
+        CKobject._K_('a1').style.width = '930px';
+        CKobject.getObjectById('ckplayer_a1').width = 930;
+    }
+    function Open() {//打开播放列表
+        CKobject._K_('a2').style.display = 'block';
+        CKobject._K_('playerlist').style.display = 'block';
+        CKobject._K_('a3').style.display = 'none';
+        CKobject._K_('a1').style.width = '600px';
+        CKobject.getObjectById('ckplayer_a1').width = 600;
+    }
+    var nowD = 0;//目前播放的视频的编号(在数组里的编号)
+    var frontTime = false;//前置广告倒计时是否在运行中
+    var frontHtime = false;//后置广告是否在进行中
+    var videoarr = new Array();//新建一个数组来存flash端视频地址，添加方法就像下面一样
+    videoarr.push('/video/20160625.flv');
+    videoarr.push('/video/20160618.flv');
+    videoarr.push('/video/20160611.flv');
+    videoarr.push('/video/20160604.flv');
+    videoarr.push('/video/2016/20151.flv');
+        videoarr.push('/video/2016/20152.flv');
+        videoarr.push('/video/2016/20153.flv');
+        videoarr.push('/video/2016/20154.flv');
+        videoarr.push('/video/2016/20155.flv');
+        videoarr.push('/video/2016/20156.flv');
+        videoarr.push('/video/2016/20157.flv');
+        videoarr.push('/video/2016/20158.flv');
+        videoarr.push('/video/2016/20159.flv');
+        videoarr.push('/video/2016/201510.flv');
+        videoarr.push('/video/2016/201511.flv');
+        videoarr.push('/video/2016/201512.flv');
+        videoarr.push('/video/2016/201513.flv');
+        videoarr.push('/video/2016/201514.flv');
+        videoarr.push('/video/2016/201515.flv');
+        videoarr.push('/video/2016/201516.flv');
+        videoarr.push('/video/2015/20141.flv');
+        videoarr.push('/video/2015/20142.flv');
+        videoarr.push('/video/2015/20143.flv');
+        videoarr.push('/video/2015/20144.flv');
+        videoarr.push('/video/2015/20145.flv');
+        videoarr.push('/video/2015/20146.flv');
+        videoarr.push('/video/2015/20147.flv');
+        videoarr.push('/video/2015/20148.flv');
+        videoarr.push('/video/2015/20149.flv');
+        videoarr.push('/video/2015/201410.flv');
+        videoarr.push('/video/2015/201411.flv');
+        videoarr.push('/video/2015/201412.flv');
+        videoarr.push('/video/2015/201413.flv');
+        videoarr.push('/video/2015/201414.flv');
+        videoarr.push('/video/2015/201415.flv');
+        videoarr.push('/video/2015/201416.flv');
+        videoarr.push('/video/2015/201417.flv');
+        videoarr.push('/video/2015/201418.flv');
+        videoarr.push('/video/2015/201419.flv');
+        videoarr.push('/video/2015/201420.flv');
+        videoarr.push('/video/2015/201421.flv');
+        videoarr.push('/video/2015/201422.flv');
+        videoarr.push('/video/2015/201423.flv');
+        videoarr.push('/video/2015/201424.flv');
+         videoarr.push('/Upload/201672_2ad794d8-cabc-41a2-a423-5cb78deccc24.flv');
+        videoarr.push('/Upload/201679_552fb43f-b6ee-49ff-a021-1b6e50000962.flv');
+
+        videoarr.push('/Upload/201607162_c34146e8-0134-4318-8f3c-92a28e8e2aff.flv');
+        videoarr.push('/Upload/20160716_01d4da2f-b9dd-4a8f-910c-c561744eb786.flv');
+        videoarr.push('/Upload/20160723_ff7360db-adb9-4fd8-85fc-4d70e2eee664.flv');
+        videoarr.push('/Upload/20160730_938b355f-6506-4df6-850f-cccaa75e5da5.flv'); //50
+        videoarr.push('/Upload/20160806 就业创业在宁波：“大创赛”浙江赛区落幕_7831e58d-2c2f-44cf-baa2-b5c248270bf5.flv');
+        videoarr.push('/Upload/20160825_f4169aba-82ee-42b8-a5de-ee9232b9741c.flv');
+        videoarr.push('/Upload/201608252_69e9f2a2-a6f9-42e3-b83f-c8c2d8d0750b.flv');
+        videoarr.push('/video/2016/20160912.flv');
+
+       videoarr.push( "/Upload/20160903就业创业在宁波：实践基地为大学生就业找“捷径”_7ef1737d-f150-4190-80c9-a5d83b09a086.flv" );
+       videoarr.push( "/Upload/20160903就业创业在宁波：民营资本打造“甬漂之家”_03977204-0c3d-4713-ae22-e0b95240cd3f.flv");
+       videoarr.push( "/Upload/20160903就业创业在宁波：“服务之星”让政策宣传动起来_4bd11968-fb24-4166-934b-0ac9cd84d3c8.flv" );
+       videoarr.push("/Upload/20160924 就业创业在宁波：大创赛决战在即_923dca6e-a61d-4ecb-b423-6f93116aa311.flv")
+       videoarr.push("/Upload/20160928就业创业在宁波：“大创赛”全国总决赛启幕 精英集聚宁波_641f4aa5-a7db-4dfe-9348-7f4729ee66c6.flv")
+       videoarr.push( "/Upload/20161008就业创业在宁波：慈溪创业小额贷款发放过亿 惠及千人创业者_f4deccff-a25a-4928-9d0b-96404aa4a36d.flv");
+       videoarr.push( "/Upload/20161015就业创业在宁波：无线充电 前景看好_e8abec27-9347-48dd-bd33-affc5b936b49.flv" );
+       videoarr.push( "/Upload/20161022就业创业在宁波：福城社区创业“微”超市为居民就业添助力_249c7a4e-e588-4f84-8b6b-5b1c91f63a47.flv" );
+       videoarr.push( "/Upload/20161029就业创业在宁波：手机看胎儿 智能超声记录“第一次微笑”_e14ba523-4e71-4d6f-a46c-2c7c8773f687.flv" );
+
+        videoarr.push( "/Upload/20161105就业创业在宁波：首个“PPP”创业园区开建 创业者有了新“归宿”_a27a0fad-d96d-476b-82f4-4c5754a90ff3.flv" );
+        videoarr.push( "/Upload/20161112就业创业在宁波：从旧校区到“集盒”创业园_f2ce384e-823c-4d25-a56b-3fb6472f6056.flv" );
+        videoarr.push( "/Upload/20161119就业创业在宁波：象山助推农村电商创业势头好_a3a827e5-e6b9-4656-9ee1-7451c878d655.flv" );
+        videoarr.push( "/Upload/农村电商 温暖同行_32daee9b-c3ad-4d30-8b45-5b26faa0504d.flv" );
+        videoarr.push( "/Upload/20161126就业创业在宁波：“好简历”怎么来 简历大赛告诉你-宁波广电网_95c37a6a-e878-44e6-b90a-d21ec68282e1.flv" );
+        videoarr.push( "/Upload/20161203 就业创业在宁波：有备而来的毕业生 招聘企业很青睐-宁波广电网_70418dcf-a3b8-45cf-a78e-7a5f485fed95.flv" );
+        videoarr.push( "/Upload/20161210宁波电视台一套看看看播出 就业创业在宁波：毕业生开公司 创业实现价值-宁波广电网_4727eb63-2c13-4530-bd4c-2f0ee809be04.flv" );
+        videoarr.push( "/Upload/20161212宁波电视台一套看看看 监狱举行“就业创业推介会” 为服刑人员回归社会做准备-宁波广电网_781e8b79-0b76-4127-ac6a-8e4aaef954fe.flv" );
+        videoarr.push( "/Upload/20161217宁波电视台一套看看看 就业创业在宁波：咖啡相伴创业梦-宁波广电网_7fd03177-2eb7-4a15-9f57-14aa0a85da4a.flv" );
+        videoarr.push( "/Upload/20161224宁波电视台《看看看》就业创业在宁波：中国大学生岗位创业联盟首次落地宁波-宁波广电网_73505d56-7f84-4616-9ba2-fef0e7c00312.flv" );
+        videoarr.push( "/Upload/20161231就业创业在宁波：鄞州“大创园”获评为全国创业孵化示范基地-宁波广电网_5ef62f5b-48b1-4ba9-b5dd-3580adea70a6.flv" );
+        videoarr.push( "/Upload/20170107nbdst.flv");
+        videoarr.push( "/Upload/20170114宁波电视台一套看看看 就业创业在宁波：小项目圆残疾人创业大梦想-宁波广电网_ad363451-56ee-4d42-8e89-298a9422ae2e.flv");
+        videoarr.push( "/Upload/20170121宁波电视台 看看看 就业创业在宁波：社保“一体机” 乡镇街道都有了！-宁波广电网_a4fce046-3866-4cf1-9349-5596732a1162.flv");
+        videoarr.push( "/Upload/20170204就业创业在宁波：年后招聘旺市到来了-宁波广电网_ce09282a-2b01-4c4c-9d04-a1ce1996b038.flv");
+
+
+
+    function playvideo(n) {
+        nowD = n;
+        var flashvars = {
+            f: videoarr[n],
+            c: 0,
+            p: 2,
+            v: 100
+        };
+        var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'samedomain',wmode:'transparent'};
+        CKobject.embedSWF('/content/js/ckplayerbar/ckplayer.swf','a1','ckplayer_a1','100%','100%',flashvars,params);
+    }
+    playvideo(0);
+                    </script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

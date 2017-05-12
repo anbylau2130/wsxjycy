@@ -1,0 +1,256 @@
+﻿
+@{
+    ViewBag.Title = "Jobs";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+
+
+<link href="/Content/css/jobs.css" rel="stylesheet" type="text/css" />
+<script src="/Content/js/common.js"></script>
+<!--[if lte ie 6]>
+<script src="js/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div,ul,img,li,input,a,img,p,span');
+</script>
+<![endif]-->
+<script type="text/javascript">
+        $(function(){
+            $("#headNav li").mouseleave(function () {
+                $(this).find("div").hide(100);
+
+    });
+            $("#headNav li").mouseenter(function () {
+                $(this).find("div").show(100);
+    });
+
+    });
+
+</script>
+<script src="/Content/js/layer.min.js"></script>
+<script src="/Content/js/mylayer.js"></script>
+<div class="container main">
+    <div class="jobs">
+        <div class="crumbs">
+            当前位置：
+            <a href='/cn/index.html'>首页</a>
+            &gt;&gt; <a href='/cn/zzpxx.html'>招聘信息</a>
+        </div>
+        <div class="jobsB mt8">
+            <div class="Tag_tab1">
+                <div class="T_gray">
+                    <h3>国企招聘</h3>
+                    <em><a href="/cn/zgqzp.html">>>更多</a></em>
+                </div>
+                <div class="zp_list">
+
+
+
+                    <dl>
+                        <dd>
+                            <a target="_blank" href='/cn/zgqzp/3110.html'>
+                                尉氏县周公宅水库建设开发有限公司...
+                            </a>
+                        </dd>
+                        <dt>发布日期：[2016-12-10]</dt>
+                    </dl>
+                    <dl>
+                        <dd>
+                            <a target="_blank" href='/cn/zgqzp/3074.html'>
+                                尉氏原水集团有限公司所属分公司
+                                ...
+                            </a>
+                        </dd>
+                        <dt>发布日期：[2016-11-28]</dt>
+                    </dl>
+                    <dl>
+                        <dd>
+                            <a target="_blank" href='/cn/zgqzp/2909.html'>
+                                尉氏县鄞州申环污水处理有限公司招...
+                            </a>
+                        </dd>
+                        <dt>发布日期：[2016-08-04]</dt>
+                    </dl>
+                    <dl>
+                        <dd>
+                            <a target="_blank" href='/cn/zgqzp/2514.html'>
+                                尉氏县石化进出口有限公司招聘启事
+                            </a>
+                        </dd>
+                        <dt>发布日期：[2016-01-20]</dt>
+                    </dl>
+                    <dl>
+                        <dd>
+                            <a target="_blank" href='/cn/zgqzp/2501.html'>
+                                尉氏科学探索中心管理有限公司招聘...
+                            </a>
+                        </dd>
+                        <dt>发布日期：[2016-01-11]</dt>
+                    </dl>
+                    <dl>
+                        <dd>
+                            <a target="_blank" href='/cn/zgqzp/2489.html'>
+                                尉氏能源集团有限公司招聘公告
+                            </a>
+                        </dd>
+                        <dt>发布日期：[2016-01-06]</dt>
+                    </dl>
+                    <dl>
+                        <dd>
+                            <a target="_blank" href='/cn/zgqzp/2467.html'>
+                                尉氏宁电投资发展有限公司招聘公告
+                            </a>
+                        </dd>
+                        <dt>发布日期：[2015-12-29]</dt>
+                    </dl>
+                    <dl>
+                        <dd>
+                            <a target="_blank" href='/cn/zgqzp/2422.html'>
+                                尉氏县周公宅水库建设开发有限公司...
+                            </a>
+                        </dd>
+                        <dt>发布日期：[2015-11-24]</dt>
+                    </dl>
+                    <dl>
+                        <dd>
+                            <a target="_blank" href='/cn/zgqzp/2366.html'>
+                                尉氏保税区投资开发有限责任公司
+                                ...
+                            </a>
+                        </dd>
+                        <dt>发布日期：[2015-10-22]</dt>
+                    </dl>
+                    <dl>
+                        <dd>
+                            <a target="_blank" href='/cn/zgqzp/2342.html'>
+                                尉氏光耀热电有限公司招聘公告
+                            </a>
+                        </dd>
+                        <dt>发布日期：[2015-09-25]</dt>
+                    </dl>
+                    <dl>
+                        <dd>
+                            <a target="_blank" href='/cn/zgqzp/2336.html'>
+                                金华宁能热电有限公司招聘公告
+                            </a>
+                        </dd>
+                        <dt>发布日期：[2015-09-22]</dt>
+                    </dl>
+
+                </div>
+            </div>
+
+        </div>
+
+     
+    </div>
+  
+</div>
+
+<script type="text/javascript">
+        var isLog;
+        function login(){
+            var uname=$.trim($("#uname").val());
+            var pwd=$.trim($("#pwd").val());
+            var yzm=$.trim($("#yzm").val());
+            if(uname==''||pwd==''){
+                 mylayer('请输入用户名和密码！');
+                 return;
+            }
+            if(yzm==''){
+                 mylayer('请输入验证码！');
+                 return;
+            }
+            $.post("/Web/MemberUsers/Login",{UserName:uname,Pwd:pwd,ValidCode:yzm},function(data){
+                if (data.state == "success") {
+                      $("#memberInfo").html(data.msg);
+                      isLog='True';
+                      $("#memberInfo").append("<a href='/ZpWeb/Zpzpxx/List' class='btn_sub' style='margin-left: 12px;width: 180px;height: 40px;line-height: 35px;font-size: 18px;' target='_blank'>招聘岗位发布</a>");
+                } else {
+                      mylayer(data.msg);
+                      $("#img_yzm").attr("src","/Web/Default/GetValidateCode?d="+Math.random());
+                }
+            })
+        }
+        function logout(){
+                $.post("/Web/MemberUsers/LoginOut",function(data){
+                       if (data.state == "success") {
+                             $("#memberInfo").html(data.msg);
+                             $("#img_yzm").attr("src","/Web/Default/GetValidateCode?d="+Math.random());
+                             isLog='False';
+                       } else {
+                             mylayer(data.msg);
+                       }
+                })
+        }
+        $(function(){
+                $.post("/Web/MemberUsers/isLog",function(data){
+                       if (data.state == "successd") {
+                             $("#memberInfo").html(data.msg);
+                               isLog='True';
+                               $("#memberInfo").append("<a href='/ZpWeb/Zpzpxx/List' class='btn_sub' style='margin-left: 12px;width: 180px;height: 40px;line-height: 35px;font-size: 18px;' target='_blank'>招聘岗位发布</a>");
+                       }
+                });
+                loadDatas();
+        });
+
+        function GoZpxx(){
+          $.post("/Web/MemberUsers/isLog",function(data){
+                       if (data.state == "successd") {
+
+                    window.location.href="/Web/MemberUsers/home";
+
+
+                       }else{
+                     alert("请先登录");
+                		location.reload();
+               }
+          });
+        }
+
+        function GoQzinfo(){
+           $.post("/Web/MemberUsers/isLog",function(data){
+                       if (data.state == "successd") {
+                               //window.location.href="/Web/QzInfo/List";
+                               window.location.href="/web/QZQzyx/EditQzyx";
+               }else{
+                     alert("请先登录");
+                		location.reload();
+               }
+           });
+        }
+
+       function goto(v_gjc){
+          window.open("/cn/zzplist.html?gjc="+v_gjc);
+       };
+
+       function qzzp_ss(){
+          var gjc=$("#zp_gjc").val();
+          if(gjc=="请输入公司名称或职位名称"){
+             gjc="";
+          }
+          window.open("/cn/zzplist.html?gjc="+gjc+"&gzdd="+$("#zp_gzdd").val()+"&day="+$("#zp_day").val());
+       };
+      /* function loadDatas(){//add by drt
+              var url ='/Web/HomeData/GetData';
+
+               //easyPost(url, { mname: 'RenderTopQyList' },'#RenderTopQyList');
+              easyPost(url, { mname: 'RenderTopVZpList3' },'#RenderTopVZpList3');
+              easyPost(url, { mname: 'RenderTopWtzp' },'#RenderTopWtzp');
+              easyPost(url, { mname: 'RenderTopXyzpList' },'#RenderTopXyzpList');
+        }*/
+        function loadDatas(){//add by drt
+              var url ='/Web/HomeData/GetData';
+
+               //easyPost(url, { mname: 'RenderTopQyList' },'#RenderTopQyList');
+                //easyPost(url, { mname: 'RenderTopVZpList3' },'#RenderTopVZpList3');
+                //9easyPost(url, { mname: 'RenderTopWtzp' }, '#RenderTopWtzp');
+                $.post('/Web/HomeData/GetData', { mname: 'RenderTopVZpList3' }, function (data) {
+                  $("#RenderTop").append($(data).find("tr"));
+              })
+              $.post('/Web/HomeData/GetData', { mname: 'RenderTopWtzp' }, function (data) {
+                  $("#RenderTop").prepend($(data).find("tr"));
+              })
+
+              easyPost(url, { mname: 'RenderTopXyzpList' },'#RenderTopXyzpList');
+        }
+</script>

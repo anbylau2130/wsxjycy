@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* 基础样式 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, iframe {display: block;}
+body, div,i,em, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section,span{margin:0;padding:0;/*word-break:break-all*/}
+ul,li,dl,dt,dd,ol{list-style:none}
+input[type="text"],input[type="search"]{-webkit-appearance:none;-webkit-tap-highlight-color:#fff;outline:0; border:1px solid #ddd;padding:0px 4px;line-height:23px;height:23px;}
+input[type="button"] {background:#e73414;line-height:23px;color:#fff;padding:0px 6px; }
+input[type="checkbox"] {margin: 0px 3px 0px 4px;}
+body,button,input,select,textarea,td{outline-style: none;font:12px/25px  "Microsoft YaHei",Arial;}
+a,a:visited{text-decoration:none;outline:0}
+
+/**公共的**/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,textarea,p,blockquote,center{margin:0 auto;padding:0}
+body{font:normal 12px  "Microsoft YaHei",Arial,"Lucida Grande",Verdana;color:#000; background:url("../images/bg2.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/bg2.jpg*/ repeat top center ; position:relative;}
+ol,ul{list-style:none;}
+h3{ font-size:14px;}
+/*h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+*/
+a{text-decoration:none; color:#333;}
+a:hover{text-decoration:none;color:#CC3300;}
+img{border:0;}
+em,i,cite,b{font-style:normal;font-weight:normal;}
+input,select{vertical-align:middle;}
+input,button,select,textarea{ outline:none; }
+textarea{ font-size:13px; resize:none;}
+.clear,.clear1{overflow:hidden;clear:both;height: 0px; font-size:0px;}
+.cl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.cl { zoom: 1; }
+.fl{ float:left; display:inline;}
+.fr{ float:right;display:inline;}
+.inputU{ background-color: #fff;padding:0px 5px; border: 1px solid #ddd; line-height:23px;height:23px;}
+em a{color:#999;}
+.per{ position:relative;}
+.w_2{ width:48.6%;float:left; display:inline;}
+.wl{ width:48.6%;float:left; display:inline;}
+.wr{ float:left; display:inline;}
+.h10{height:10px;}
+/*空*/
+.mt34{ margin-top:34px;}
+.mt20{ margin-top:20px;}
+.mt15{ margin-top:15px;}
+.mt25 {margin-top: 25px;}
+.mt30{margin-top:30px;}
+.mt8 {margin-top: 10px;}
+.mr5{margin-right: 5px;}
+.ml12 {margin-left: 12px;}
+.ml10{margin-left: 10px;}
+.mt10 {margin-top: 10px;}
+.mb10 {margin-bottom: 10px;}
+.pp10{padding: 10px 20px;}
+.pp5_10{padding: 0px 5px;}
+.pl10{padding-left:10px;}
+.pt10{padding-top:10px;}
+.pr10{padding-right:10px;}
+.pt5{padding-top:5px;}
+.pp5{padding:5px;}
+.pp2{padding:2px;}
+
+.al {text-align: left;}
+.ac {text-align: center;}
+.ar {text-align: right;}
+/*文字大小*/
+.xs2 {font-size: 14px !important;}
+.xs3 {font-size: 16px !important;}
+.xs4 {font-size: 18px !important;}
+.xs5 {font-size: 20px !important;}
+
+/*文字颜色*/
+.c_red {color:#FF0000;}
+.c_orange {color: #d70101;}
+.c_white {color: #fff;}
+.c_blur {color:#0099FF;}
+.c_grey {color: #999;}
+.fzbold {font-weight: bold;}
+
+.red_ss {
+color: #c30000;
+font-weight: bold;
+line-height: 22px;
+}
+/*按钮*/
+.btn_orange{ background:#e73414; display:inline-block;-moz-border-radius: 4px;-webkit-border-radius: 4px; border-radius: 4px; color:#FFF; CURSOR: pointer;  HEIGHT:33px; line-HEIGHT:33px;display: inline-block; font-size:14px; color:#FFFFFF; font-weight:bold; text-align:center; overflow:hidden; width:200px;behavior: url("img/PIE.htc")/*tpa=http://www.nbjy.org.cn/Content/css/img/PIE.htc*/; position:relative\9;}
+
+.btn_blur{ background:#3ea1f5;display:inline-block;-moz-border-radius: 4px;-webkit-border-radius: 4px; border-radius: 4px; color:#FFF; padding:5px 20px;}
+.btn_orange:hover{ background:#e88904;color:#FFF;}
+.btn_reg:hover{ background:#59c3ff;color:#FFF;}
+
+.btn_blue{ background:#0099FF; display:inline-block;-moz-border-radius: 4px;-webkit-border-radius: 4px; border-radius: 4px; color:#FFF; CURSOR: pointer;  HEIGHT:33px; line-HEIGHT:33px;display: inline-block; font-size:14px; color:#FFFFFF; font-weight:bold; text-align:center; overflow:hidden; width:200px;behavior: url("img/PIE.htc")/*tpa=http://www.nbjy.org.cn/Content/css/img/PIE.htc*/; position:relative\9;}
+.btn_blue:hover{background:#0066CC;}
+
+.btn02 {   width: 91px;    height: 28px;
+    cursor: pointer;
+    border: medium none;
+    background: url("../images/btnBg_09.gif")/*tpa=http://www.nbjy.org.cn/Content/images/btnBg_09.gif*/ no-repeat scroll 0% 0% transparent;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 13px;
+    margin-top: 8px;
+}
+ .btn02:hover{background-color: #16c1f3;}
+/*背景*/
+.bg_f4 {background-color: #f4f4f4;-moz-border-radius: 4px;-webkit-border-radius:4px; border-radius:4px; }
+.bg_blur {background-color: #f1f9fa;-moz-border-radius: 4px;-webkit-border-radius:4px; border-radius:4px;color:#FFFFFF;}
+.bg_red2 {background-color: #ee4136;-moz-border-radius: 4px;-webkit-border-radius:4px; border-radius:4px;color:#FFFFFF; }
+.bg_orange {background-color: #e73414;-moz-border-radius: 4px;-webkit-border-radius:4px; border-radius:4px; color:#FFFFFF; }
+
+.sb1{border:1px solid #deb187; display:inline-block; width:100%;}
+.sb2{border:1px solid #f4dcc1; display:inline-block; width:100%;}
+
+.hui_bs{border-bottom:1px dotted #ccc;}
+
+.crumbs{ width:98%; text-align:left; color:#444;line-height:25px; margin-top:8px; background: url("../images/home.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/home.jpg*/ no-repeat 13px 4px ;padding-left:3%; font-family:"宋体"; }
+.crumbs a{color:#000; }
+.crumbs a:hover{color:#1a7cb7;}
+.crumbs .sep{color:#ccc; padding:0px 5px;}
+/* RADIO */
+.regular-radio {display: none;}
+.regular-radio + label {-webkit-appearance: none;background: #fff;border: 1px solid #cacece;
+	/*box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);*/
+	padding: 11px;border-radius: 50px;display: inline-block;	position: relative;}
+.regular-radio:checked + label:after {
+	content: ' ';
+	width: 16px;
+	height: 16px;
+	border-radius: 50px;
+	position: absolute;
+	top: 3px;
+	background:url("../images/sprite-assorted.png")/*tpa=http://www.nbjy.org.cn/Content/images/sprite-assorted.png*/ no-repeat -7px -35px;
+	/*box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);*/
+	text-shadow: 0px;
+	left: 3px;
+	font-size: 32px;
+}
+
+.regular-radio:checked + label {
+	background-color: #2489c5;
+	color: #99a1a7;
+	border: 1px solid #2489c5;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.regular-radio + label:active, .regular-radio:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.big-radio + label {
+	padding: 16px;
+}
+
+.big-radio:checked + label:after {
+	width: 24px;
+	height: 24px;
+	left: 4px;
+	top: 4px;
+}
+
+textarea{border:1px solid #ddd;}
+.btn_orange2{ background:#e73414; display:inline-block;-moz-border-radius: 4px;-webkit-border-radius: 4px; border-radius: 4px; color:#FFF; CURSOR: pointer;  display: inline-block; font-size:14px; color:#FFFFFF; font-weight:bold; text-align:center; overflow:hidden; padding:2px 20px;}
+.btn_orange2:hover{ background:#666;color:#FFF;}
+
+.in_sub{background-color: #e73414; color:#fff; padding:0px 5px; cursor:pointer; border:0px; }
+.in_sub:hover{background-color: #16c1f3;color:#fff; }
+
+.Tab_cc{}
+.Tab_cc td {border-bottom:1px solid #e3e6ed; padding:5px 3px; text-align:center;}
+.Tab_cc th{background:#ffff3;padding:5px 3px;border-bottom:1px solid #e3e6ed; border-top:1px solid #e3e6ed;}
+
+.btn_blur2{ background:#89db3a;display:inline-block;-moz-border-radius: 4px;-webkit-border-radius: 4px; border-radius: 4px; color:#FFF; padding:5px 15px; text-align:center; font-size:20px; width:50px; }
+.btn_blur2:hover{background:#67b21f;color:#FFF;}
+.btn_blur3{ background:#fa6a23;display:inline-block;-moz-border-radius: 4px;-webkit-border-radius: 4px; border-radius: 4px; color:#FFF; padding:5px 15px; text-align:center; font-size:20px;width:50px; }
+.btn_blur3:hover{background:#de701f;color:#FFF;}

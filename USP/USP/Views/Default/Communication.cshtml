@@ -1,0 +1,157 @@
+﻿
+@{
+    ViewBag.Title = "Communication";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+
+
+<link href="/Content/css/ny.css" rel="stylesheet" type="text/css" />
+<div class="container main">
+    <div class="ny">
+        <div class="crumbs">当前位置：<a href="/cn/index.html">首页</a>&gt;&gt; 互动交流</div>
+        <div class="fl" style="width: 240px;">
+            <div class="zwgk_tab sb1">
+                <div class="tit"><h3>信件处理情况查询</h3></div>
+                <table width="100%" border="0" cellspacing="9" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td align="right">身份证号：<br></td>
+                            <td><input type="text" id="sfz" name="textfield"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">标题：</td>
+                            <td><input type="text" id="title" name="textfield2"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><input name="textfield2" type="button" onclick="ok();" value="搜索" class="btn02"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="zwgk_tab sb1">
+                <div class="tit"><h3>资金（基金）违纪举报查询</h3></div>
+                <table width="100%" border="0" cellspacing="9" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td align="right">查询码：<br></td>
+                            <td><input type="text" id="sjm" name="textfield"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><input name="textfield2" type="button" onclick="ok2();" value="搜索" class="btn02"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <img src="/content/images/hd2.jpg" style=" margin-top:10px">
+            <img src="/content/images/hd3.jpg" style=" margin-top:10px">
+        </div>
+        <div class="fr" style="width: 740px;">
+            <div class="Tag_tab2 w_1 pp5 mb10 sb1" style="width: 730px;">
+                <div class="w_2 per">
+                    <div class="T_gray"><h3>局长信箱</h3></div>
+                    <div class="explain">
+                        <img src="/content/images/pc10.gif">
+                        <p>十分感谢您对我们工作的关心和支持! 同时请您遵守以下规定：</p>
+                        <p>1、用户的信息必须真实、完整、准确。</p>
+                        <p>2、信件的内容必须客观、真实、有理、有据。</p>
+                    </div>
+                    <div class="btnBox">
+                        <a href="/cn/wyxx.html" target="_blank">我要写信</a>
+                    </div>
+                    <div class="T_heng"><h3>来信回复</h3><em><a href="/cn/jzxx.html" target="_blank">&gt;&gt;更多</a></em></div>
+                    <ul class="Tag_news1">
+
+                        <li><a href="/easyinfo/MailBox/info/103?type=1" target="_blank">创业集市</a><span>[2015-08-12]</span></li>
+
+
+                    </ul>
+                </div>
+                <div class="w_2 per ml10">
+                    <div class="T_gray"><h3>咨询平台</h3></div>
+                    <div class="explain">
+                        <img src="/content/images/pc11.gif">
+                        <p>1、进入网上咨询的相应板块后，欲咨询请点击相应咨询版块的“我要咨询”按钮。</p>
+                        <p>2、请在主题中详细描述欲咨询的内容，有可能的话请尽量留下...</p>
+                    </div>
+                    <div class="btnBox">
+                        <a href="/cn/hwyzx.html" target="_blank">我要咨询</a>
+                    </div>
+                    <div class="T_heng"><h3>咨询回复</h3><em><a href="/cn/hzxpt.html" target="_blank"></>&gt;&gt;更多</a></em></div>
+                    <ul class="Tag_news1">
+
+                        <li><a href="/easyinfo/MailBox/info/301?type=3" target="_blank">查询个人档案</a><span>[2016-07-20]</span></li>
+                        <li><a href="/easyinfo/MailBox/info/299?type=3" target="_blank">关于报到证</a><span>[2016-07-20]</span></li>
+                        <li><a href="/easyinfo/MailBox/info/297?type=3" target="_blank">稳岗补助申报</a><span>[2016-07-20]</span></li>
+                        <li><a href="/easyinfo/MailBox/info/296?type=3" target="_blank">毕业生档案</a><span>[2016-07-18]</span></li>
+                        <li><a href="/easyinfo/MailBox/info/295?type=3" target="_blank">毕业生档案查询</a><span>[2016-07-17]</span></li>
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="Tag_tab1 w_2">
+                <div class="T_gray">
+                    <h3>监督投诉</h3>
+                    <em><a href="/cn/hjdts.html" target="_blank">&gt;&gt;更多</a></em>
+                </div>
+                <ul class="Tag_news">
+
+                    <li><a href="/easyinfo/MailBox/info/93?type=2" target="_blank">查什么都要短信验证</a><span>[2015-07-08]</span></li>
+                    <li><a href="/easyinfo/MailBox/info/94?type=2" target="_blank">网站设计不合理，建议升级软件</a><span>[2015-06-17]</span></li>
+                    <li><a href="/easyinfo/MailBox/info/96?type=2" target="_blank">就业登记查询无法输入身份证号码</a><span>[2015-05-30]</span></li>
+                    <li><a href="/easyinfo/MailBox/info/95?type=2" target="_blank">无法输入身份证号</a><span>[2015-05-24]</span></li>
+
+
+                </ul>
+            </div>
+            <div class="Tag_tab1 w_2 ml10">
+                <div class="T_gray">
+                    <h3>资金（基金）违纪举报</h3>
+                    <em><a href="/cn/hjjjgts.html" target="_blank">&gt;&gt;更多</a></em>
+                </div>
+                <ul class="Tag_news"></ul>
+            </div>
+            <div class="clear"></div>
+            <div class="Tag_tab1 w_2">
+                <div class="T_gray">
+                    <h3>调查征集</h3>
+                    <em><a href="/cn/hwsdc.html" target="_blank">&gt;&gt;更多</a></em>
+                </div>
+                <ul class="Tag_news">
+
+                    <li><a href="/web/Investigate/info/5" target="_blank">对于新的网站您最希望提供哪方面的内容？</a><span>[2015-07-29]</span></li>
+
+
+
+                    <li><a href="/easyinfo/PublicOpinion/info/2" target="_blank">对于我们新网站的意见和建议</a><span>[2015-08-03]</span></li>
+
+                </ul>
+            </div>
+            <!--					<div class="Tag_tab1 w_2 ml10">
+                                    <div class="T_gray">
+                                        <h3>民意征集</h3>
+                                        <em><a href="/cn/hmyzj.html" target="_blank">&gt;&gt;更多</a></em></div>
+                                    <ul class="Tag_news">
+
+                       <li><a href="/easyinfo/PublicOpinion/info/2" target="_blank">对于我们新网站的意见和建议</a><span>[2015-08-03]</span></li>
+
+                                    </ul>
+                                </div>-->
+            <div class="clear"></div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function ok(){
+            window.open("/cn/jzxx.html?t="+$("#title").val()+"&s="+$("#sfz").val());
+        }
+
+                 function ok2(){
+            window.open("/cn/hjjjgts.html?s="+$("#sjm").val());
+        }
+</script>

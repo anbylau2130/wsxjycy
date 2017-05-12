@@ -1,0 +1,152 @@
+﻿
+@model USP.Models.Entity.WebVedios
+@{
+    ViewBag.Title = "Add";
+}
+
+@*@section themes{
+        <link href="~/Static/Css/usp.webvedios.add.css" rel="stylesheet" />
+    }*@
+<div class="easyui-panel" style="width: 100%; height: 100%">
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-plus"></span> 添加
+            <button id="btnReturn" type="button" class="btn btn-primary btn-xs pull-right">返回</button>
+        </div>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+           
+            <div class="form-group">
+                @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.VedioUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.EditorFor(model => model.VedioUrl, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VedioUrl, "", new { @class = "text-danger" })
+                </div>
+                <input class="btn" type="button" id="choosefile" value="选择文件" />
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.PictureUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.PictureUrl, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PictureUrl, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.BrowerCount, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.BrowerCount, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.BrowerCount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Remark, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.Remark, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Remark, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group form-actions">
+                <div class="col-md-offset-2 col-xs-1 ">
+                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>添加</button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@section scripts{
+    @*<script src="~/Static/Js/usp.webvedios.add.js"></script>*@
+    <script type="text/javascript">
+    (function () {
+        usp.namespace("usp.webvedios.add");
+
+        usp.webvedios.add = {
+            init: function (btnReturnId, basePage) {
+                usp.webvedios.add.eventInit.btnReturnInit(btnReturnId, basePage);
+            },
+            eventInit: {
+                btnReturnInit: function (id, basePage) {
+                    $(id).on("click", function () {
+                        location.href = basePage;
+                        return false;
+                    });
+                }
+            },
+            kindEditInit: function (id) {
+                KindEditor.ready(function (K) {
+                    window.editor = K.create(id, {
+                        resizeType: 1,
+                        allowPreviewEmoticons: false,
+                        allowImageUpload: true,//允许上传图片
+                        allowFileManager: true, //允许对上传图片进行管理
+                        uploadJson: '../../KindEdit/Upload', //上传图片的java代码，只不过放在jsp中
+                        fileManagerJson: '../../KindEdit/FileManager',
+                        afterUpload: function () { this.sync(); }, //图片上传后，将上传内容同步到textarea中
+                        afterBlur: function () { this.sync(); },   ////失去焦点时，将上传内容同步到textarea中
+                        items: [
+                            'source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code', 'cut', 'copy', 'paste',
+                            'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+                             'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+                            'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
+                            'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+                            'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image', 'multiimage',
+                            'flash', 'media', 'insertfile', 'table', 'hr', 'emoticons', 'baidumap', 'pagebreak',
+                            'anchor', 'link', 'unlink', 'justifyfull', ]
+                    });
+                });
+            },
+            kindEditFileload: function (btnId, contentId) {
+                KindEditor.ready(function (K) {
+                    var editor = K.editor({
+                        allowFileManager: true,
+                        uploadJson: '../../KindEdit/Upload',
+                        fileManagerJson: '../../KindEdit/FileManager',
+                    });
+                    K(btnId).click(function () {
+                        editor.loadPlugin('insertfile', function () {
+                            editor.plugin.fileDialog({
+                                fileUrl: K(btnId).val(),
+                                clickFn: function (url, title) {
+                                    K(contentId).val(url);
+                                    editor.hideDialog();
+                                }
+                            });
+                        });
+                    });
+                });
+            },
+        }
+    })(this);
+
+    $(function () {
+        usp.init();
+        usp.webvedios.add.kindEditInit("#Content");
+        usp.webvedios.add.kindEditFileload("#choosefile", "#VedioUrl");
+        usp.webvedios.add.init("#btnReturn", "'/Web/WebVedios/Index");
+        if ('@TempData["returnMsgType"]' == 'error') {
+            toastr.error('@TempData["returnMsg"]');
+        }
+    })
+    </script>
+}
+
+

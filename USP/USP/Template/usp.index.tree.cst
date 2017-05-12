@@ -1,0 +1,471 @@
+﻿<%@ CodeTemplate Inherits="CodeTemplate"TargetLanguage="Text" Description="NetTiers main template."Debug="True" ResponseEncoding="UTF-8"%>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+
+<%-- 要打印的表 --%>
+<%@ Property Name="Table" Type="TableSchema" DeepLoad="True" Optional="False" Category="01. Getting Started - Required" Description="Database that the tables views, and stored procedures shouldbe based on. IMPORTANT!!! If SourceTables and SourceViews are left blank, theEntire Database will then be generated." %>
+<%@ Property Name="Area" Type="String" DeepLoad="True" Optional="False" Category="01. Getting Started - Required" Description="Database that the tables views, and stored procedures shouldbe based on. IMPORTANT!!! If SourceTables and SourceViews are left blank, theEntire Database will then be generated." %>
+<%@ Property Name="Controller" Type="String" DeepLoad="True" Optional="False" Category="01. Getting Started - Required" Description="Database that the tables views, and stored procedures shouldbe based on. IMPORTANT!!! If SourceTables and SourceViews are left blank, theEntire Database will then be generated." %>
+<%@ Property Name="Action" Type="String" DeepLoad="True" Optional="False" Category="01. Getting Started - Required" Description="Database that the tables views, and stored procedures shouldbe based on. IMPORTANT!!! If SourceTables and SourceViews are left blank, theEntire Database will then be generated." %>
+
+
+
+public class <%=Controller%>Controller : SysPrivilegeController
+    {
+       
+        I<%=Table.Name%>Bll  <%=Table.Name%>Bll;
+     
+        public <%=Controller%>Controller(I<%=Table.Name%>Bll <%=Table.Name%>Bll)
+        {
+            this.<%=Table.Name%>Bll = <%=Table.Name%>Bll;
+        }
+        
+        [MenuItem(Parent = "系统设置", Name = "字典管理", Icon = "icon-sitemap")]
+        public ActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Index(string actionName)
+        {
+            return OtherAction(actionName);
+        }
+
+        private ActionResult OtherAction(string ac)
+        {
+            switch (ac)
+            {
+                case "Tree":
+                    return GetTree();
+              
+                default:
+                    return Content("");
+            }
+        }
+
+        private ActionResult GetTree()
+        {
+           return  Json(<%=Table.Name%>Bll.GetTree(), JsonRequestBehavior.AllowGet);
+        }
+
+        
+        [Privilege(Menu = "字典管理", Name = "注销")]
+        [HttpPost]
+        public ActionResult Cancel(int id)
+        {
+            return Json(<%=Table.Name%>Bll.Cancel(id, ((User)HttpContext.Session[Common.Constants.USER_KEY]).SysOperator.ID));
+        }
+
+        [Privilege(Menu = "字典管理", Name = "激活")]
+        [HttpPost]
+        public ActionResult Active(int id)
+        {
+            return Json(<%=Table.Name%>Bll.Active(id, ((User)HttpContext.Session[Common.Constants.USER_KEY]).SysOperator.ID));
+        }
+
+        [Privilege(Menu = "字典管理", Name = "新增")]
+        [HttpPost]
+        public ActionResult Add(<%=Table.Name%> model)
+        {
+            var currentUser = HttpContext.Session[Constants.USER_KEY] as USP.Models.POCO.User;
+            model.CreateTime = DateTime.Now;
+            model.Creator = currentUser.SysOperator.ID;
+            AjaxResult result = new AjaxResult();
+            if (ModelState.IsValid)
+            {
+                 result = <%=Table.Name%>Bll.Add(model);
+            }
+            return Json(result);
+        }
+        [Privilege(Menu = "字典管理", Name = "修改")]
+        [HttpPost]
+        public ActionResult Edit(<%=Table.Name%> model)
+        {
+            var currentUser = HttpContext.Session[Constants.USER_KEY] as USP.Models.POCO.User;
+            model.Creator = currentUser.SysOperator.ID;
+            model.CreateTime = DateTime.Now;
+            model.Auditor = null;
+            model.AuditTime = null;
+            var result = new AjaxResult();
+            if (ModelState.IsValid)
+            {
+                result=<%=Table.Name%>Bll.Edit(model, currentUser.SysOperator.ID);
+            }
+            return Json(result);
+        }
+        
+        
+ 
+
+
+        [Privilege(Menu = "字典管理", Name = "删除")]
+        [HttpPost]
+        public ActionResult Del(<%=Table.Name%> model)
+        {
+            var currentUser = HttpContext.Session[Constants.USER_KEY] as USP.Models.POCO.User;
+            var result = <%=Table.Name%>Bll.Delete(model.ID);
+            return Json(result);
+        }
+    }
+
+
+
+       /////////////////////////////////////////CSHTML////////////////////////////////////////////////////
+
+
+@{
+    ViewBag.Title = "Title";
+}
+@model USP.Models.Entity.<%=Table.Name%>
+@section themes{
+    <link href="~/Static/Css/usp/usp.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.css" rel="stylesheet" />
+    <style>
+          /* {
+            display:none;
+        }*/
+    </style>
+}
+
+
+    <div style="height:100%">
+        <div class="panel panel-default" style="width:20%;height:100%;float:left;">
+            <div class="panel-body panel-fit">
+                <div class="easyui-panel" data-options="fit:true,border:false">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">树管理</div>
+                        <div class="panel-body panel-fit">
+                            <ul id="tree"></ul>
+                            <div id="mm" class="easyui-menu" style="width: 120px;">
+                                <div onclick="usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.append('#tree')" iconcls="icon-add">
+                                    添加节点
+                                </div>
+                                <div onclick="usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.remove('#tree','#mm','/<%=Area%>/<%=Controller%>/Del','/<%=Area%>/<%=Controller%>/<%=Action%>?actionName=Tree')" iconcls="icon-remove">
+                                    删除节点
+                                </div>
+                                <div onclick="usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.collapseAll('#tree')" iconcls="icon-remove">
+                                折叠全部
+                            </div>
+                            <div onclick="usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.expandAll('#tree')" iconcls="icon-remove">
+                                展开全部
+                            </div>
+                                @*<div onclick="update()" iconcls="icon-edit">修改节点</div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-info" style="width:80%;height:100%;float:left">
+            <div class="panel-body panel-fit" >
+                <div id="p" class="easyui-panel" data-options="fit:true,border:false">
+                    <div class="panel panel-default">
+                        <div id="titleInfo" class="panel-heading">&nbsp;</div>
+                        <div class="panel-body panel-fit" style="height:100%">
+                            <input type="hidden" id="opType" />
+                            <br />
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="form-horizontal">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                     <%foreach(ColumnSchema col in Table.Columns){ %>
+                                     <div class="form-group">
+                                          @Html.LabelFor(model => model.<%=col.Name %>, htmlAttributes: new { @class = "control-label col-md-2" })
+                                          <div class="col-md-9">
+                                              @Html.EditorFor(model => model.<%=col.Name %>, new { htmlAttributes = new { @class = "form-control" } })
+                                              @Html.ValidationMessageFor(model => model.<%=col.Name %>, "", new { @class = "text-danger" })
+                                          </div>
+                                    </div>
+                                     <%} %>
+                                    
+                                    
+                                    <div class="form-group form-actions">
+                                        <div class="col-md-offset-2 col-xs-1 ">
+                                            <button type="button" onclick="usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.save('#tree','#opType', '#mm', '/<%=Area%>/<%=Controller%>/Add', '/<%=Area%>/<%=Controller%>/Edit', '/<%=Area%>/<%=Controller%>/<%=Action%>?actionName=Tree')" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>保存</button>
+                                        </div>
+                                        <div class="col-xs-1 ">
+                                            <button type="button" onclick="usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.active('#tree','#mm','/<%=Area%>/<%=Controller%>/Active','/<%=Area%>/<%=Controller%>/<%=Action%>?actionName=Tree')" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>启用</button>
+                                        </div>
+                                        <div class="col-xs-1 ">
+                                            <button type="button" onclick="usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.cancel('#tree','#mm', '/<%=Area%>/<%=Controller%>/Cancel','/<%=Area%>/<%=Controller%>/<%=Action%>?actionName=Tree')" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>禁用</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section scripts{
+        @*<script src="~/Static/Js/shop/usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.js"></script>*@
+
+        <script type="text/javascript">
+
+            (function () {
+                usp.namespace("usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>");
+                usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%> = {
+                    init: function (treeid,treeDataUrl,menu) {
+                        usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.init(treeid, treeDataUrl, menu);
+                    },
+                    tree: {
+                        init: function (id, url, menu) {
+                            $(id).tree({
+                                url: url,
+                                onClick: function (node) {
+                                    var parentNode = $(id).tree('getParent', node.target);
+                                     $("#opType").val("add");
+                                     $("#titleInfo").text("新增节点");
+                                     $("#ID").val(node.id);
+                                     $("#Name").val(node.text);
+                                     $("#Parent").val(parentNode ? parentNode.id : '');
+                                      if (node.attributes) {
+                                        $("#opType").val("update");
+                                        $("#titleInfo").text("修改节点");
+                                      <%foreach(ColumnSchema col in Table.Columns){ %>
+                                      <% if(col.Name!="ID" &&col.Name!="Name" &&col.Name!="Parent"  ) {%>
+                                     $("#<%=col.Name %>").val(node.attributes.<%=col.Name %>);
+                                     <%}%>
+                                     <%}%>
+                                     }
+                                },
+                                onContextMenu: function (e, node) {
+                                    e.preventDefault();
+                                    $(id).tree('select', node.target);
+                                    $(menu).menu('show', {
+                                        left: e.pageX,
+                                        top: e.pageY
+                                    });
+                                }
+                            });
+                        },
+                        remove: function (id, menuId,delUrl, dataUrl) {
+                            var node = $(id).tree('getSelected');
+                            $.post(delUrl, { "id": node.id }, function (data) {
+                                usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.init(id, dataUrl, menuId);
+                            });
+                        },
+                        append: function (id) {
+                            var node = $(id).tree('getSelected');
+                            $(id).tree('append', {
+                                parent: (node ? node.target : null),
+                                data:
+                                [
+                                    {
+                                        text: 'node',
+                                        checked: true
+                                    }
+                                ]
+                            });
+                            $("#opType").val("add");
+                            $("#titleInfo").text("新增节点");
+                             $("#Parent").val(node ? node.id : null);
+                            $("#Name").val("node");
+                             <%foreach(ColumnSchema col in Table.Columns){ %>
+                              <% if(col.Name!="ID" &&col.Name!="Name" &&col.Name!="Parent"  ) {%>
+                             $("#<%=col.Name %>").val('');
+                             <%}%>
+                             <%}%>
+                        },
+                         collapseAll: function (id) {
+                            $(id).tree("collapseAll");
+                        },
+                        expandAll: function (id) {
+                            $(id).tree("expandAll");
+                        },
+                        save: function (treeId,opId,menuId,addUrl,editUrl,dataUrl) {
+                            var type = $(opId).val();
+                            switch (type) {
+                                case "add":
+                                    $.post(addUrl, {
+                                         <%foreach(ColumnSchema col in Table.Columns){ %>
+                                          <% if(col.Name!="ID") {%>
+                                         <%=col.Name %>: $("#<%=col.Name %>").val(),
+                                         <%}%>
+                                         <%}%>
+                                    }, function (data) {
+                                        toastr.success(data.message);
+                                        usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.init(treeId, dataUrl, menuId);
+                                    });
+                                    break;
+                                case "update":
+                                    $.post(editUrl, {
+                                     <%foreach(ColumnSchema col in Table.Columns){ %>
+                                      <% if(col.Name!="ID" &&col.Name!="Name" &&col.Name!="Parent"  ) {%>
+                                      <%=col.Name %>: $("#<%=col.Name %>").val(),
+                                     <%}%>
+                                     <%}%>
+                                    }, function (data) {
+                                        toastr.success(data.message);
+                                        usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.init(treeId, dataUrl, menuId);
+                                    });
+                                    break;
+                            }
+                        },
+                        active: function (id,menuId, activeUrl, dataUrl) {
+                            var node = $(id).tree('getSelected');
+                            $.post(activeUrl, { "id": node.id }, function (data) {
+                                toastr.success(data.message);
+                                usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.init(id, dataUrl, menuId);
+                            });
+                        },
+                        cancel: function (id, menuId, cancelUrl, dataUrl) {
+                            var node = $(id).tree('getSelected');
+                            $.post(cancelUrl, { "id": node.id }, function (data) {
+                                toastr.success(data.message);
+                                usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.tree.init(id, dataUrl, menuId);
+                            });
+                        }
+                        
+                    }
+                }
+            })(this);
+
+               
+               
+
+                
+                $(function () {
+                    usp.init();
+                    usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.init('#tree', '/<%=Area%>/<%=Controller%>/<%=Action%>?actionName=Tree', '#mm');
+                })
+        </script>
+    }
+
+
+
+
+<script runat="template">
+
+//将数据库类型转化为C#类型
+
+public string DataType2CSharpType(System.Data.DbType dbType)
+
+{
+
+    switch (dbType)
+
+    {
+
+        case DbType.AnsiString:
+
+            return "string";
+
+        case DbType.AnsiStringFixedLength:
+
+            return "string";
+
+        case DbType.Binary:
+
+            return "byte[]";
+
+        case DbType.Boolean:
+
+            return "bool";
+
+        case DbType.Byte:
+
+            return "byte";
+
+        case DbType.Currency:
+
+            return "decimal";
+
+        case DbType.Date:
+
+            return "DateTime";
+
+        case DbType.DateTime:
+
+            return "DateTime";
+
+        case DbType.DateTime2:
+
+            return "DateTime";
+
+        case DbType.DateTimeOffset:
+
+            return "DateTime";
+
+        case DbType.Decimal:
+
+            return "decimal";
+
+        case DbType.Double:
+
+            return "double";
+
+        case DbType.Guid:
+
+            return "Guid";
+
+        case DbType.Int16:
+
+            return "short";
+
+        case DbType.Int32:
+
+            return "int";
+
+        case DbType.Int64:
+
+            return "long";
+
+        case DbType.Object:
+
+            return "object";
+
+        case DbType.SByte:
+
+            return "sbyte";
+
+        case DbType.Single:
+
+            return "float";
+
+        case DbType.String:
+
+            return "string";
+
+        case DbType.StringFixedLength:
+
+            return "string";
+
+        case DbType.Time:
+
+            return "TimeSpan";
+
+        case DbType.UInt16:
+
+            return "ushort";
+
+        case DbType.UInt32:
+
+            return "uint";
+
+        case DbType.UInt64:
+
+            return "ulong";
+
+        case DbType.VarNumeric:
+
+            return "decimal";
+
+        case DbType.Xml:
+
+            return "string";
+
+        default:
+
+            return "object";
+
+    }
+
+}
+
+</script>

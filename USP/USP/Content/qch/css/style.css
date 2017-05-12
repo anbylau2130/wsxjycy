@@ -1,0 +1,15 @@
+.leftLoop{  position:relative;    } 
+.leftLoop .hd{ height:30px; background:#f4f4f4;  } 
+.leftLoop .prev,.leftLoop .next{ display:block; position:absolute;top:130px;  width:27px; height:51px; line-height:10px;   
+     cursor:pointer; background:url("../images/icoLeft.gif")/*tpa=http://www.nbjy.org.cn/content/qch/images/icoLeft.gif*/ no-repeat;} 
+.leftLoop .prev{left:0px;    margin-top: -65px;}
+.leftLoop .next{ background:url("../images/icoRight.gif")/*tpa=http://www.nbjy.org.cn/content/qch/images/icoRight.gif*/ no-repeat;right:0px;      margin-top: -65px;} 
+
+.leftLoop .hd ul{ float:right; zoom:1; margin-top:10px; display:none;  } 
+.leftLoop .hd ul li{ position:relative; _display:inline; float:left;  width:10px; height:10px; overflow:hidden; background:#ccc; margin-right:10px; text-indent:-999px; cursor:pointer; 
+    -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; behavior: url("PIE.htc")/*tpa=http://www.nbjy.org.cn/content/qch/css/PIE.htc*/;} 
+.leftLoop .hd ul li.on{ background:#f00;  } 
+
+.leftLoop .bd{ overflow:hidden; margin:0 55px;  width:90%;} 
+.leftLoop .bd ul{ overflow:hidden; zoom:1; } 
+.leftLoop .bd ul li{ margin:0 10px; text-align:center; float:left;display:_inline;  }

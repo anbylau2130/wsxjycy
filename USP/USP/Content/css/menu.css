@@ -1,0 +1,39 @@
+﻿@charset "utf-8";
+/* CSS reset */
+
+ol, ul { list-style: none; }
+a { text-decoration: none; }
+textarea { resize: none; }
+a, a:active, a:focus { outline: none; }
+img { border: none; }
+
+/* 通用样式 */
+.fl { float: left; }
+.fr { float: right; }
+.clearfix:after { content: "."; display: block; height: 0; visibility: hidden; clear: both; }
+.clearfix { *zoom: 1; }
+
+
+/**global background**/
+.footMenu, .footShare, .gMenu ul, .footer .leftBg, .footer .rightBg { background: url("../images/global_repeat.png")/*tpa=http://www.nbjy.org.cn/Content/images/global_repeat.png*/ repeat-x; }
+    .headSearch .txt, .headSearch .btn, .footer .gap, .gMenu .cur, .footMenu dl, .footShare .attention .n, .footShare .attention .btn { background: url("../images/global_sprite.png")/*tpa=http://www.nbjy.org.cn/Content/images/global_sprite.png*/ no-repeat; }
+
+.wrapNav { z-index: 990; width: 100%; position: relative; }
+
+
+.headNav { margin: 0 auto; line-height: 45px; width: 1004px; background: url("../images/nav_bg.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/nav_bg.jpg*/ repeat-x 0px 0px;display:inline-block; }
+.headNav ul{padding-left:5px;}
+    .headNav li { position: relative; float: left; background: url("../images/nav_li.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/nav_li.jpg*/ no-repeat top right; FONT-SIZE: 14px; FONT-WEIGHT: bold; }
+    .headNav .cur { background: url("../images/nav_li.jpg")/*tpa=http://www.nbjy.org.cn/Content/images/nav_li.jpg*/ no-repeat top right; }
+        .headNav .cur a { color: #9c6f3b; background: url("../images/nav_h.png")/*tpa=http://www.nbjy.org.cn/Content/images/nav_h.png*/ no-repeat center center; }
+    .headNav a { float: left; height: 44px; padding: 0px 24px; color: #fff; font-weight: bold; }
+        .headNav a:hover { background: url("../images/nav_h.png")/*tpa=http://www.nbjy.org.cn/Content/images/nav_h.png*/ no-repeat center center; color: #ca4d01; }
+
+    .headNav li:hover { background: url("../images/nav_h.png")/*tpa=http://www.nbjy.org.cn/Content/images/nav_h.png*/ no-repeat center center; color: #ca4d01; }
+        .headNav li:hover a { color: #ca4d01; }
+
+.subNav { position: absolute; top: 44px; left: 4px;right:4px; width:auto;z-index: 99; padding: 10px 0px; background: #a00202; display: none; font-size:12px;   }
+.headNav .subNav span{height: 25px;line-height: 25px; }
+.headNav .subNav a { background-image:none; width: 100%;float: left; height: 25px;line-height: 25px; color: #fff; font-weight: 100;padding:0px;display:inline-block; text-indent:16px; overflow:hidden; }
+    .headNav .subNav a:hover { background-image:none; background: #ee511e;display:inline-block; }
+.headNav li:hover .subNav a { color: #fff; }

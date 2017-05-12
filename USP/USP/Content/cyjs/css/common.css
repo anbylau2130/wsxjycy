@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* 基础样式 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, iframe {display: block;}
+body, div,i,em, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section,span{margin:0;padding:0;/*word-break:break-all*/}
+ul,li,dl,dt,dd,ol{list-style:none}
+input[type="text"],input[type="search"]{-webkit-appearance:none;-webkit-tap-highlight-color:#fff;outline:0; border:1px solid #ddd;padding:0px 4px;line-height:23px;height:23px;}
+input[type="button"] {background:#f90;line-height:23px;color:#fff;padding:0px 6px; }
+input[type="checkbox"] {margin: 0px 3px 0px 4px;}
+body,button,input,select,textarea,td{outline-style: none;font:14px/25px  "Microsoft YaHei",Arial;}
+a,a:visited{text-decoration:none;outline:0}
+
+/**公共的**/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,textarea,p,blockquote,center{margin:0 auto;padding:0}
+body{font:normal 14px  "Microsoft YaHei",Arial,"Lucida Grande",Verdana;color:#000; position:relative;}
+ol,ul{list-style:none;}
+h3{ font-size:14px;}
+/*h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+*/
+a{text-decoration:none; color:#333;}
+a:hover{text-decoration:none;color:#f90;}
+img{border:0;}
+em,i,cite,b{font-style:normal;font-weight:normal;}
+input,select{vertical-align:middle;}
+input,button,select,textarea{ outline:none; }
+textarea{ font-size:13px; resize:none;}
+.clear,.clear1{overflow:hidden;clear:both;height: 0px; font-size:0px;}
+.cl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.cl { zoom: 1; }
+.fl{ float:left; display:inline;}
+.fr{ float:right;display:inline;}
+.inputU{ background-color: #fff;padding:0px 5px; border: 1px solid #ddd; line-height:23px;height:23px;}
+em a{color:#999;}
+.per{ position:relative;}
+.w_2{ width:48.6%;float:left; display:inline;}
+.wl{ width:48.6%;float:left; display:inline;}
+.wr{ float:left; display:inline;}
+.h10{height:10px;}
+/*空*/
+.mt8 {margin-top: 10px;}
+.pl10 {padding-left: 10px;}
+.pp2{padding:2px;}
+.pt10{padding-top:10px;}
+
+.al {text-align: left;}
+.ac {text-align: center;}
+.ar {text-align: right;}
+/*文字大小*/
+.xs2 {font-size: 14px !important;}
+.xs3 {font-size: 16px !important;}
+.xs4 {font-size: 18px !important;}
+.xs5 {font-size: 20px !important;}
+.xs6 {font-size: 24px !important;}
+
+/*文字颜色*/
+.c_red {color:#FF0000;}
+.c_orange {color:#FF0;}
+.c_white {color: #fff;}
+.c_blur {color:#0099FF;}
+.c_grey {color: #999;}
+.fzbold {font-weight: bold;}
+

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html style="width:100%;height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Css")
+    @Styles.Render("~/Css/easyui")
+    @Styles.Render("~/Css/datetimepicker")
+    @Styles.Render("~/Css/select2")
+    @Styles.Render("~/Css/confirm")
+    @Styles.Render("~/Css/FileInput")
+
+    <link rel="stylesheet" href="~/Content/kindeditor/themes/default/default.css" />
+    <link rel="stylesheet" href="~/Content/kindeditor/plugins/code/prettify.css" />
+
+    <script charset="utf-8" src="~/Content/kindeditor/kindeditor.js"></script>
+    <script charset="utf-8" src="~/Content/kindeditor/lang/zh_CN.js"></script>
+    <script charset="utf-8" src="~/Content/kindeditor/plugins/code/prettify.js"></script>
+
+    @RenderSection("themes", required: false)
+</head>
+<body class="easyui-layout">
+    @RenderBody()
+    @Scripts.Render("~/Js/jquery")
+    @Scripts.Render("~/Js/jqueryval")
+    @Scripts.Render("~/Js/bootstrap")
+    @Scripts.Render("~/Js/easyui")
+    @Scripts.Render("~/Js/datetimepicker")
+    @Scripts.Render("~/Js/select2")
+    @Scripts.Render("~/Js/confirm")
+    @Scripts.Render("~/Js/FileInput")
+    @Scripts.Render("~/Js/usp")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

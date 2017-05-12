@@ -1,0 +1,210 @@
+﻿
+@model USP.Models.Entity.WebServiceGuide
+@{
+    ViewBag.Title = "Edit";
+}
+
+@section themes{
+   @* <link href="~/Static/Css/shop/usp.webserviceguide.edit.css" rel="stylesheet" />*@
+}
+
+<div id="p" class="easyui-panel" style="width: 100%; height: 100%">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-pencil"></span>完善信息
+            <button id="btnReturn" type="button" class="btn btn-primary btn-xs pull-right">返回</button>
+        </div>
+        <div class="panel-body panel-fit">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.Reserve, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.Creator, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.CreateTime, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.Auditor, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.AuditTime, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.Canceler, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.CancelTime, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="form form-horizontal" role="form">
+                    <fieldset id="flt-baseInfo">
+                        <legend>基础信息</legend>
+                        <div class="form-group">
+                         
+                            <div class="form-group" id="fg-Title">
+                                @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-GuideName">
+                                @Html.LabelFor(model => model.GuideName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.GuideName, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.GuideName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-DealDeptName">
+                                @Html.LabelFor(model => model.DealDeptName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.DealDeptName, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.DealDeptName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-DealAddress">
+                                @Html.LabelFor(model => model.DealAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.DealAddress, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.DealAddress, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-Contacts">
+                                @Html.LabelFor(model => model.Contacts, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Contacts, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Contacts, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-PhoneNumber">
+                                @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-DealTime">
+                                @Html.LabelFor(model => model.DealTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.DealTime, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.DealTime, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-BaseEstablishment">
+                                @Html.LabelFor(model => model.BaseEstablishment, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.TextAreaFor(model => model.BaseEstablishment, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.BaseEstablishment, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-EstablishmentCondition">
+                                @Html.LabelFor(model => model.EstablishmentCondition, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.TextAreaFor(model => model.EstablishmentCondition, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.EstablishmentCondition, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-ApplicationMaterials">
+                                @Html.LabelFor(model => model.ApplicationMaterials, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.TextAreaFor(model => model.ApplicationMaterials, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.ApplicationMaterials, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-ManagementProcess">
+                                @Html.LabelFor(model => model.ManagementProcess, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.TextAreaFor(model => model.ManagementProcess, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.ManagementProcess, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-FlowChart">
+                                @Html.LabelFor(model => model.FlowChart, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.TextAreaFor(model => model.FlowChart, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.FlowChart, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" id="fg-BrowseCount">
+                                @Html.LabelFor(model => model.BrowseCount, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.BrowseCount, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.BrowseCount, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                           
+                            <div class="form-group" id="fg-Remark">
+                                @Html.LabelFor(model => model.Remark, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Remark, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Remark, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                          
+                           
+                           
+                          
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group form-actions">
+                        <div class="col-md-offset-2 col-xs-4 ">
+                            <button type="submit" class="btn btn-primary">保存</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@section scripts{
+    @*<script src="~/Static/Js/usp.webserviceguide.edit.js"></script>*@
+
+    <script type="text/javascript">
+     (function () {
+    usp.namespace("usp.webserviceguide.edit");
+    usp.webserviceguide.edit = {
+        init: function (btnReturnId, basePage) {
+            $(".datepicker").datetimepicker({
+                format: 'YYYY-MM-DD'
+            });
+
+            usp.webserviceguide.edit.eventInit.btnReturnInit(btnReturnId, basePage);
+        },
+        kindEditInit:function(id){
+            KindEditor.ready(function (K) {
+                window.editor = K.create(id, {
+                    resizeType: 1,
+                    allowPreviewEmoticons: false,
+                    allowImageUpload: true,//允许上传图片
+                    allowFileManager: true, //允许对上传图片进行管理
+                    uploadJson: '../../KindEdit/Upload', //上传图片的java代码，只不过放在jsp中
+                    fileManagerJson: '../../KindEdit/FileManager',
+                    afterUpload: function () { this.sync(); }, //图片上传后，将上传内容同步到textarea中
+                    afterBlur: function () { this.sync(); },   ////失去焦点时，将上传内容同步到textarea中
+                    items: [
+                        'source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code', 'cut', 'copy', 'paste',
+                        'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+                         'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+                        'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
+                        'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+                        'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image', 'multiimage',
+                        'flash', 'media', 'insertfile', 'table', 'hr', 'emoticons', 'baidumap', 'pagebreak',
+                        'anchor', 'link', 'unlink', 'justifyfull', ]
+                });
+            });
+        },
+        eventInit: {
+            btnReturnInit: function (id, basePage) {
+                $(id).on("click", function () {
+                    location.href = basePage;
+                    return false;
+                });
+            }
+        },
+    }
+})(this);
+        $(function () {
+            usp.init();
+            usp.webserviceguide.edit.init(
+                "#btnReturn",
+                "/Web/WebServiceGuide/Edit"
+                );
+            usp.webserviceguide.edit.kindEditInit("#EstablishmentCondition")
+            usp.webserviceguide.edit.kindEditInit("#BaseEstablishment")
+            usp.webserviceguide.edit.kindEditInit("#ApplicationMaterials")
+            usp.webserviceguide.edit.kindEditInit("#ManagementProcess")
+            usp.webserviceguide.edit.kindEditInit("#FlowChart")
+        })
+    </script>
+}

@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+/*-----------注册页-----------*/
+
+/*面包屑*/
+.breadcrumb{/*background:#f4f4f4;*/ height:40px; overflow:hidden; line-height:40px; position:relative;font-size: 16px;}
+.breadcrumb ul{background:#f4f4f4;overflow: hidden;border-radius: 4px;height: 40px}
+.breadcrumb li{float:left; width:163px;/* width:20%; */ text-align:center; position:relative; z-index:2; }
+.breadcrumb li.t2{text-indent: 18px;}
+/* .breadcrumb li.t3,.breadcrumb li.t4{text-indent: 24px;} */
+.breadcrumb li.t3{text-indent: 14px;*text-indent: 11px;}
+.breadcrumb li span{font-size: 20px;margin-right: 5px;vertical-align: middle;font-weight: bold;}
+.breadcrumb li em{position:absolute; right:-22px; top:-2px; width:0; height:0; line-height:0; border-width:22px 0 22px 22px; border-color:transparent  transparent transparent #fff; border-style:dashed dashed dashed solid;}
+.breadcrumb li i{position:absolute; right:-20px; top:-2px; width:0; height:0; line-height:0; border-width:22px 0 22px 22px; border-color:transparent  transparent transparent #f4f4f4; border-style:dashed dashed dashed solid;}
+.breadcrumb li.current{background:#ee4136; color:#fff; z-index:1;}
+.breadcrumb li.current i{border-color:transparent  transparent transparent #ee4136;}
+
+
+.page_title {font-size: 20px;font-weight: normal;}
+
+
+.tab_link{position:relative;margin-top:20px;height:50px; background:#f4f4f4; border-bottom:1px solid #dfdfdf;}
+.tab_link h3{height:50px; padding:0 27px; line-height:50px;font-size:18px; color:#888;float: left;display: inline-block;}
+.tab_link h3.current{ position:relative;top:0px; background:#fff;border-top:2px solid #fd9400; color:#fd9400;line-height:48px;}
+.tab_link .lgn_link{position:absolute;right:17px;top:15px;font-size:14px;}
+.tab_link .lgn_link a{text-decoration:underline;}
+
+.login_reg { width:100%;margin:auto;text-align: left; overflow: hidden; padding-bottom:70px; }
+.login_reg dl{ padding:6px 0px;line-height:30px;}
+.login_reg label{width:150px; padding-right:5px; float:left; font-size:14px; text-align:right;}
+.login_reg .tips_r2{font-size:12px; padding:0px 0px 0px 10px; color:#999999;}
+.login_reg em{ padding-right:3px;font-size:12px;}
+.login_reg h3{font-size:20px; line-height:60px; color:#f69802;}
+.login_reg .sub_03{margin-left:88px;}
+.login_reg li p{width:100%; float:left;}
+.login_reg .inputU{ width:250px;behavior: url("img/PIE.htc")/*tpa=http://www.nbjy.org.cn/Content/css/img/PIE.htc*/; position:relative\9;}
+
+.login_reg .careful{ padding-left:155px;font-size:12px; color:#FF0000;width:100%; float:left;}
+.ico_i{background: url("../img/icon.png")/*tpa=http://www.nbjy.org.cn/Content/img/icon.png*/ no-repeat -8px -8px;width: 19px;height: 19px;vertical-align: middle; display:inline-block;}
+.ico_f{background: url("../img/icon.png")/*tpa=http://www.nbjy.org.cn/Content/img/icon.png*/ no-repeat  -37px -8px;width: 19px;height: 19px;vertical-align: middle;display:inline-block;}
+.login_reg .btn_orange{ line-height:45px;height:45px; width:300px;margin-left:160px;left:160px\9}
+
+
+/*登录页*/
+.lgform_wrap {width: 310px;border-radius: 4px; float:right;}
+.lgform .lgform_input {font-size: 16px;width: 247px;height: 30px;line-height: 30px;padding: 5px 5px 5px 58px;
+background: #fff url("../img/lgform.png")/*tpa=http://www.nbjy.org.cn/Content/img/lgform.png*/ no-repeat 0 -1px;border-radius: 4px;border: none;}
+.lgform .lgform_input.pwd {background-position: 0 -44px;}
+.lgform_wrap .btn_orange{width:93%; HEIGHT:40px; line-HEIGHT:40px; display:inline-block;}
